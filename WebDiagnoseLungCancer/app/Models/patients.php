@@ -19,15 +19,15 @@ class patients extends Authenticatable
      */
     protected $table = 'patients';
     protected $fillable = [
-        'Id',
-        'Name',
-        'Age',
-        'DateOfBirth',
-        'Address',
-        'Phone',
-        'Symptomps',
-        'Date_diagnose',
-        'Date_ctscan',
+        'id',
+        'name',
+        'age',
+        'dateofbirth',
+        'address',
+        'phone',
+        'symptomps',
+        'date_diagnosis',
+        'date_ctscan',
 
     ];
 

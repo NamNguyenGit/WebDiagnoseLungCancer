@@ -35,15 +35,15 @@
                 <tbody>
                     @foreach($patients as $key => $patient)
                     <tr>
-                        <td>{{$patient->Id}}</td>
-                        <td>{{$patient->Name}}</td>
-                        <td>{{$patient->Age}}</td>
-                        <td>{{$patient->DateOfBirth}}</td>
-                        <td>{{$patient->Address}}</td>
-                        <td>{{$patient->Phone}}</td>
-                        <td style=" max-width: 200px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{$patient->Symptoms}}</td>
-                        <td>{{$patient->Date_diagnose}}</td>
-                        <td>{{$patient->Date_ctscan}}</td>
+                        <td>{{$patient->id}}</td>
+                        <td>{{$patient->name}}</td>
+                        <td>{{$patient->age}}</td>
+                        <td>{{$patient->dateofbirth}}</td>
+                        <td>{{$patient->address}}</td>
+                        <td>{{$patient->phone}}</td>
+                        <td>{{$patient->symptoms}}</td>
+                        <td>{{$patient->date_diagnosis}}</td>
+                        <td>{{$patient->date_ctscan}}</td>
                     </tr>
                     @endforeach
                 </tbody>
