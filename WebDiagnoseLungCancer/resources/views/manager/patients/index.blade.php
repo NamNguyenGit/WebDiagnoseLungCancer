@@ -1,4 +1,4 @@
-@extends('main')
+@extends('manager.main')
 @section('content')
 <div class="content-wrapper">
 
