@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatientsController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::group(['prefix' => '/'], function () {
     Route::get('/patients', [PatientsController::class, 'index'])->name('patients.index');
+
+});
+
+Route::group(['prefix' => '/'], function () {
+    Route::get('/', [HomeController::class, 'home']);
+
 });

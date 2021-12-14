@@ -10,21 +10,21 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
-    <link rel="stylesheet" href="/client/patients/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/manager/patients/plugins/fontawesome-free/css/all.min.css">
 
-    <link rel="stylesheet" href="/client/patients/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="/manager/patients/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
 
-    <link rel="stylesheet" href="/client/patients/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="/manager/patients/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
-    <link rel="stylesheet" href="/client/patients/plugins/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="/manager/patients/plugins/jqvmap/jqvmap.min.css">
 
-    <link rel="stylesheet" href="/client/patients/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/manager/patients/dist/css/adminlte.min.css">
 
-    <link rel="stylesheet" href="/client/patients/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="/manager/patients/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 
-    <link rel="stylesheet" href="/client/patients/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="/manager/patients/plugins/daterangepicker/daterangepicker.css">
 
-    <link rel="stylesheet" href="/client/patients/plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="/manager/patients/plugins/toastr/toastr.min.css">
 
     @yield("css")
 
@@ -41,17 +41,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
             </ul>
-
-
             <ul class="navbar-nav ml-auto">
-
-                <!-- <li class="nav-item">
-                    <a href="">
-
-                        <i class="fas fa-sign-out-alt"></i><span>Log out</span>
-
-                    </a>
-                </li> -->
             </ul>
         </nav>
 
@@ -128,39 +118,39 @@
 
     </div>
 
-    <script src="/client/patients/plugins/jquery/jquery.min.js"></script>
+    <script src="/manager/patients/plugins/jquery/jquery.min.js"></script>
 
-    <script src="/client/patients/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/manager/patients/plugins/jquery-ui/jquery-ui.min.js"></script>
 
     <script>
         $.widget.bridge('uibutton', $.ui.button)
     </script>
 
-    <script src="/client/patients/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/manager/patients/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="/client/patients/plugins/chart.js/Chart.min.js"></script>
+    <script src="/manager/patients/plugins/chart.js/Chart.min.js"></script>
 
-    <script src="/client/patients/plugins/sparklines/sparkline.js"></script>
+    <script src="/manager/patients/plugins/sparklines/sparkline.js"></script>
 
-    <script src="/client/patients/plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="/client/patients/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <script src="/manager/patients/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="/manager/patients/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 
-    <script src="/client/patients/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <script src="/manager/patients/plugins/jquery-knob/jquery.knob.min.js"></script>
 
-    <script src="/client/patients/plugins/moment/moment.min.js"></script>
-    <script src="/client/patients/plugins/toastr/toastr.min.js"></script>
-    <script src="/client/patients/plugins/moment/moment.min.js"></script>
-    <script src="/client/patients/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="/manager/patients/plugins/moment/moment.min.js"></script>
+    <script src="/manager/patients/plugins/toastr/toastr.min.js"></script>
+    <script src="/manager/patients/plugins/moment/moment.min.js"></script>
+    <script src="/manager/patients/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <script src="/client/patients/plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="/manager/patients/plugins/summernote/summernote-bs4.min.js"></script>
 
-    <script src="/client/patients/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="/manager/patients/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 
-    <script src="/client/patients/dist/js/adminlte.js"></script>
+    <script src="/manager/patients/dist/js/adminlte.js"></script>
 
-    <script src="/client/patients/dist/js/demo.js"></script>
+    <script src="/manager/patients/dist/js/demo.js"></script>
 
-    <script src="/client/patients/dist/js/pages/dashboard.js"></script>
+    <script src="/manager/patients/dist/js/pages/dashboard.js"></script>
     <script>
         toastr.options = {
             "debug": false,
