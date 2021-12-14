@@ -7,35 +7,32 @@
     <title>Admin</title>
 
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
-    <link rel="stylesheet" href="/manager/patients/plugins/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">
 
-    <link rel="stylesheet" href="/manager/patients/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
-    <link rel="stylesheet" href="/manager/patients/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<link rel="stylesheet" href="/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
 
-    <link rel="stylesheet" href="/manager/patients/plugins/jqvmap/jqvmap.min.css">
+<link rel="stylesheet" href="/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
-    <link rel="stylesheet" href="/manager/patients/dist/css/adminlte.min.css">
+<link rel="stylesheet" href="/admin/plugins/jqvmap/jqvmap.min.css">
 
-    <link rel="stylesheet" href="/manager/patients/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+<link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">
 
-    <link rel="stylesheet" href="/manager/patients/plugins/daterangepicker/daterangepicker.css">
+<link rel="stylesheet" href="/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 
-    <link rel="stylesheet" href="/manager/patients/plugins/toastr/toastr.min.css">
+<link rel="stylesheet" href="/admin/plugins/daterangepicker/daterangepicker.css">
 
+<link rel="stylesheet" href="/admin/plugins/toastr/toastr.min.css">
     @yield("css")
 
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-
-
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
@@ -52,9 +49,7 @@
                 <span class="brand-text font-weight-light">Admin</span>
             </a>
 
-
             <div class="sidebar">
-
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
                         <img src="/manager/patients/dist/img/adminavata.png" class="img-circle elevation-2">
@@ -63,10 +58,6 @@
                         Hi Admin
                     </div>
                 </div>
-
-
-
-
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-item">
@@ -87,16 +78,8 @@
                                 </li>
 
                             </ul>
-
-
-
-
-
-
                 </nav>
-
             </div>
-
         </aside>
 
 
@@ -118,39 +101,40 @@
 
     </div>
 
-    <script src="/manager/patients/plugins/jquery/jquery.min.js"></script>
 
-    <script src="/manager/patients/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/admin/plugins/jquery/jquery.min.js"></script>
+
+    <script src="/admin/plugins/jquery-ui/jquery-ui.min.js"></script>
 
     <script>
         $.widget.bridge('uibutton', $.ui.button)
     </script>
 
-    <script src="/manager/patients/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="/manager/patients/plugins/chart.js/Chart.min.js"></script>
+    <script src="/admin/plugins/chart.js/Chart.min.js"></script>
 
-    <script src="/manager/patients/plugins/sparklines/sparkline.js"></script>
+    <script src="/admin/plugins/sparklines/sparkline.js"></script>
 
-    <script src="/manager/patients/plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="/manager/patients/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <script src="/admin/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="/admin/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 
-    <script src="/manager/patients/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <script src="/admin/plugins/jquery-knob/jquery.knob.min.js"></script>
 
-    <script src="/manager/patients/plugins/moment/moment.min.js"></script>
-    <script src="/manager/patients/plugins/toastr/toastr.min.js"></script>
-    <script src="/manager/patients/plugins/moment/moment.min.js"></script>
-    <script src="/manager/patients/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="/admin/plugins/moment/moment.min.js"></script>
+    <script src="/admin/plugins/toastr/toastr.min.js"></script>
+    <script src="/admin/plugins/moment/moment.min.js"></script>
+    <script src="/admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <script src="/manager/patients/plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="/admin/plugins/summernote/summernote-bs4.min.js"></script>
 
-    <script src="/manager/patients/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="/admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 
-    <script src="/manager/patients/dist/js/adminlte.js"></script>
+    <script src="/admin/dist/js/adminlte.js"></script>
 
-    <script src="/manager/patients/dist/js/demo.js"></script>
+    <script src="/admin/dist/js/demo.js"></script>
 
-    <script src="/manager/patients/dist/js/pages/dashboard.js"></script>
+    <script src="/admin/dist/js/pages/dashboard.js"></script>
     <script>
         toastr.options = {
             "debug": false,
