@@ -2,7 +2,7 @@
 @section('content')
 <div class="banner_w3lspvt" id="home">
     <div class="csslider infinity" id="slider1">
-        <input type="radio" name="slides" checked="checked" id="slides_1" />
+        <input  type="radio" name="slides" checked="checked" id="slides_1" />
         <input type="radio" name="slides" id="slides_2" />
         <input type="radio" name="slides" id="slides_3" />
         <input type="radio" name="slides" id="slides_4" />

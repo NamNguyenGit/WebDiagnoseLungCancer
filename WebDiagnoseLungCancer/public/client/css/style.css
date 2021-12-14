@@ -90,7 +90,7 @@ a.navbar-brand {
 /*-- banner --*/
 
 .banner-text {
-    padding-top: 17vw;
+    padding-top: 27vw;
     width: 50%;
     margin: 0 13em;
 }
@@ -179,25 +179,25 @@ h4.agile-title,h1.agile-title,h2.agile-title {
 /*-- banner --*/
 
 .csslider>ul>li,.bs-slider-overlay,.csslider>ul>li,.bs-slider-overlay1 {
-    min-height: 750px;
+    min-height: 980px;
 }
 
 .csslider>ul>li:first-child {
-    background: url(../images/ban1.jpg) no-repeat center;
+    background: url(../images/banner9.jpg) no-repeat center;
     background-size: cover;
 }
 
 .csslider>ul>li:nth-child(2) {
-    background: url(../images/ban2.jpg) no-repeat center;
+    background: url(../images/banner4.jpg) no-repeat center;
     background-size: cover;
 }
 
 .csslider>ul>li:nth-child(3) {
-    background: url(../images/ban3.jpg) no-repeat center;
+    background: url(../images/banner11.jpg) no-repeat center;
     background-size: cover;
 }
 .csslider>ul>li:last-child {
-    background: url(../images/ban4.jpg) no-repeat center;
+    background: url(../images/banner15.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -1398,7 +1398,7 @@ a.move-top span {
 /*-- Responsive design --*/
 @media(max-width:1440px) {
 	.banner-text {
-    padding-top: 17vw;
+    padding-top:17vw;
     width: 56%;
     margin: 0 9em;
 }
