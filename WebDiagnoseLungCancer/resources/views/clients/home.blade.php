@@ -79,7 +79,7 @@
 
             <div class="title-desc text-center  px-lg-5">
 
-                <img src="/public/client/images/about.jpg" alt="news image" class="img-fluid">
+                <img src="/client/images/about.jpg" alt="news image" class="img-fluid">
                 <p>The Lung Cancer Foundation is a charity dedicated to raising awareness and support for those suffering from or at risk of lung cancer, throat cancer and other head and neck cancers, as well as providing assistance and information on living with mouth cancer for families, friends and carers.
                 </p>
 

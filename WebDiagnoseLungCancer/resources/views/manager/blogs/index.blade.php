@@ -27,8 +27,9 @@
                         <th>Content</th>
                         <th>Author</th>
                         <th>Public-Date</th>
-                        <!-- <th>Img</th> -->
+                        <th>Image</th>
                         <th>Created-At</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +41,12 @@
                         <td>{{$blogs->content}}</td>
                         <td>{{$blogs->author}}</td>
                         <td>{{$blogs->publication_date}}</td>
+                        <td style="width: 10%;"><img src="/img/{{$blogs->img}}" style="width: 100%;" alt=""></td>
                         <td>{{$blogs->created_at}}</td>
+                        <td>
+                            <a href="{{route('blogs.delete',$blogs->id)}}"> <button class="btn btn-danger">Delete</button></a>
+                            <a href="{{route('blogs.edit',$blogs->id)}}"><button class="btn btn-success">Update</button></a>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

@@ -53,7 +53,7 @@
                                 <a href="#">Role <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                                 <input type="checkbox" id="drop-2" />
                                 <ul class="inner-dropdown">
-                                    <li><a href="">Admin</a></li>
+                                    <li><a href="{{route('patients.index')}}">Admin</a></li>
                                     <li><a href="">Doctors</a></li>
                                     <li><a href="">Nurses</a></li>
                                     <li><a href="">Patients</a></li>

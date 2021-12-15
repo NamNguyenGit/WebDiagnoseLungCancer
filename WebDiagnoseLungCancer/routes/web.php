@@ -16,9 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/patients', [PatientsController::class, 'index'])->name('patients.index');
     Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs.index');
+    Route::get('/add-blog', [BlogsController::class, 'create'])->name('blogs.create');
+    Route::post('/add-blog', [BlogsController::class, 'store'])->name('blogs.store');
+    Route::get('/edit-blog/{id}', [BlogsController::class, 'edit'])->name('blogs.edit');
+    Route::put('/edit-blog', [BlogsController::class, 'update'])->name('blogs.update');
+    Route::get('/delete-blog/{id}', [BlogsController::class, 'delete'])->name('blogs.delete');
 });
 
 Route::group(['prefix' => '/'], function () {

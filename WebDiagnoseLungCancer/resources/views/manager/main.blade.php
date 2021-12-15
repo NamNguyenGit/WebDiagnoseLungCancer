@@ -95,7 +95,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('blogs.create')}}" class="nav-link">
                                         <i class="fas fa-cog nav-icon"></i>
                                         <p>Add Blogs</p>
                                     </a>
