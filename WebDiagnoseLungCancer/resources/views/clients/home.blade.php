@@ -83,45 +83,61 @@
                 <p>The Lung Cancer Foundation is a charity dedicated to raising awareness and support for those suffering from or at risk of lung cancer, throat cancer and other head and neck cancers, as well as providing assistance and information on living with mouth cancer for families, friends and carers.
                 </p>
 
-                <a class="btn mt-lg-4 mt-3 read scroll" href="#services" role="button">Learn More</a>
+
+                <a href="">
+                    <div>
+                    <button class="btn btn-lg  btn-readmore mt-lg-4 mt-3 read scroll ">Learn More</button>
+                    </div>
+                </a>
+
+
             </div>
         </div>
     </div>
 </section>
 <section class="services py-5" id="services">
     <div class="container py-md-5">
-        <h3 class="heading text-center mb-3 mb-sm-5">Blogs</h3>
+        <h3 class="heading text-center mb-3 mb-sm-5">New Blogs</h3>
         <div class="row ab-info">
+            @foreach($newblog as $key => $newblogs)
             <div class="col-md-6 ab-content ab-content1">
                 <div class="ab-content-inner">
-                    <a href="single.html"><img src="images/services2.jpg" alt="news image" class="img-fluid"></a>
+                    <a href=""><img src="images/services2.jpg" alt="news image" class="img-fluid"></a>
                     <div class="ab-info-con">
-                        <h4> Trim your Hair</h4>
-                        <a href="single.html" class="read-more two btn m-0 px-3"><span class="fa fa-arrow-circle-o-right"> </span></a>
+                        <h3 class="p-2 title-blog ">{{$newblogs->smalltitle}}</h3>
+                        <h5 class="p-2"> <span class="fas fa-clock"></span> {{$newblogs->publication_date}} </h5>
+                        <h5 class="p-2"> <span class="fas fa-user"></span> {{$newblogs->author}}</h5>
+                        <a href="">
+                            <div style="text-align: center;">
+                                <button class="btn btn-readmore ">Read More</button>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 ab-content ab-content1">
-                <div class="ab-content-inner">
-                    <a href="single.html"><img src="images/services1.jpg" alt="news image" class="img-fluid"></a>
-                    <div class="ab-info-con">
-                        <h4>Trim your Beard</h4>
-                        <a href="single.html" class="read-more two btn m-0 px-3"><span class="fa fa-arrow-circle-o-right"> </span></a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
+        <h3 class="heading text-center mb-3 mb-sm-5 pt-5">Related Blogs</h3>
         <div class="row ab-info second mt-lg-4">
+            @foreach($blog as $key => $blog)
             <div class="col-md-3 ab-content">
                 <div class="ab-content-inner">
                     <a href="single.html"><img src="images/ser3.jpg" alt="news image" class="img-fluid"></a>
                     <div class="ab-info-con">
-                        <h4>colouring</h4>
-                        <a href="single.html" class="read-more two btn m-0 px-3"><span class="fa fa-arrow-circle-o-right"> </span></a>
+                        <h3 class="title-smallblog">{{$blog->smalltitle}}</h3>
+                        <h6 class="p-1"> <span class="fas fa-clock"></span> {{$blog->publication_date}} </h6>
+                        <h6 class="p-1"> <span class="fas fa-user"></span> {{$blog->author}}</h6>
+                        <a href="">
+                            <div class="pt-1" style="text-align: center; ">
+                                <button class="btn btn-readmore ">Read More</button>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
             </div>
-
+            @endforeach
         </div>
     </div>
 </section>
@@ -295,12 +311,12 @@
     <div class="container py-md-5">
         <div class="test-info text-center">
             <h3 class="tittle order">
-                <span>CALL US TO BOOK An APPOINTMENT</span>Our team will call back immediately and Book the Appointment
+                <span>CALL US TO HAVE MORE QUESTION</span>Our team will call back immediately and Book the Appointment
             </h3>
             <h4 class="tittle my-2">123456789 </h4>
 
             <div class="read-more mx-auto m-0 text-center">
-                <a href="contact.html" class="read-more scroll btn">Click here</a>
+                <a href="" class="read-more scroll btn">Click here</a>
             </div>
         </div>
     </div>

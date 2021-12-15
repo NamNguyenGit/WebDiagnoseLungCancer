@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -9,7 +10,9 @@ class HomeController extends Controller
 {
     public function home()
     {
-        return view('clients.home');
+        $newblog = Blog::orderByDesc('created_at')->paginate(2);
+        $blog = Blog::paginate(4);
+        return view('clients.home', compact('blog', 'newblog'));
     }
 
     public function login()
@@ -32,7 +35,8 @@ class HomeController extends Controller
         return redirect()->route('clients.login');
     }
 
-    public function admin(){
+    public function admin()
+    {
         return view('clients.admin-only');
     }
 
