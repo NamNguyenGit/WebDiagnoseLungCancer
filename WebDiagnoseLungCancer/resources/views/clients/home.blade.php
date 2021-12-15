@@ -13,9 +13,9 @@
                     <div class="bs-slider-overlay">
                         <div class="banner-text">
                             <div class="container">
-                                <h2 class="movetxt agile-title text-capitalize">We Create and Renovate Hair Style Trends</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries.</p>
-                                <a href="contact.html" class="btn"> Get appointment </a>
+                                <h2 class="movetxt agile-title text-capitalize">Lung cancer is the most diagnosed cancer at 11.6%</h2>
+                                <p>Lung cancer is the most common cancer worldwide, accounting for more than <span class="indexim"> 1.8 million</span> new cases and <span  class="indexim">700.000 deaths </span>in 2020. </p>
+                                <a href="" class="btn"> Check your lungs now </a>
                             </div>
                         </div>
                     </div>
@@ -26,9 +26,9 @@
                     <div class="bs-slider-overlay1">
                         <div class="banner-text">
                             <div class="container">
-                                <h4 class="movetxt agile-title text-capitalize">We Help to grow your hair as well beard </h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries.</p>
-                                <a href="contact.html" class="btn">Get appointment </a>
+                                <h2 class="movetxt agile-title text-capitalize">To save and improve lives!</h2>
+                                <p> Dedicated to raising awareness, educating and promoting the early detection of mouth cancer as well as supporting those affected by it. </p>
+                                <a href="" class="btn">Get appointment </a>
                             </div>
                         </div>
                     </div>
@@ -39,9 +39,9 @@
                     <div class="bs-slider-overlay1">
                         <div class="banner-text">
                             <div class="container">
-                                <h2 class="movetxt agile-title text-capitalize">We Design and Create Hair Style Latest</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries.</p>
-                                <a href="contact.html" class="btn"> Get appointment</a>
+                                <h2 class="movetxt agile-title text-capitalize"><span>1 in 5 </span> cancer deaths are from lung cancer</h2>
+                                <p>About 80% of lung cancer death result from <span class="indexim">smoking tobacco </span>.</p>
+                                <a href="contact.html" class="btn"> No Smoking</a>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                         <div class="banner-text">
                             <div class="container">
                                 <h4 class="movetxt agile-title text-capitalize">We design latest trending haircuts </h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries.</p>
+                                <p>Lung cancer on track to <span  class="indexim">38%</span> to <span class="indexim">2.89 million</span> case by 2030.</p>
                                 <a href="contact.html" class="btn"> Get appointment </a>
                             </div>
                         </div>

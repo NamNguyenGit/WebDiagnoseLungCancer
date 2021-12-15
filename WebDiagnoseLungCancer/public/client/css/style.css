@@ -88,7 +88,10 @@ a.navbar-brand {
 
 
 /*-- banner --*/
-
+.indexim {
+    font-weight: bold;
+    font-size: 20px;
+}
 .banner-text {
     padding-top: 27vw;
     width: 50%;
@@ -183,7 +186,7 @@ h4.agile-title,h1.agile-title,h2.agile-title {
 }
 
 .csslider>ul>li:first-child {
-    background: url(../images/banner9.jpg) no-repeat center;
+    background: url(../images/banner11.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -193,7 +196,7 @@ h4.agile-title,h1.agile-title,h2.agile-title {
 }
 
 .csslider>ul>li:nth-child(3) {
-    background: url(../images/banner11.jpg) no-repeat center;
+    background: url(../images/banner9.jpg) no-repeat center;
     background-size: cover;
 }
 .csslider>ul>li:last-child {
@@ -1299,6 +1302,8 @@ h4.footer-title {
     text-transform: capitalize;
 }
 
+
+
 .footerv3-top p {
     font-size: 1em;
     color: #a3b1bf;
@@ -1401,7 +1406,7 @@ a.move-top span {
 /*-- Responsive design --*/
 @media(max-width:1440px) {
 	.banner-text {
-    padding-top:17vw;
+    padding-top:42vw;
     width: 56%;
     margin: 0 9em;
 }
@@ -1415,7 +1420,7 @@ a.move-top span {
 	.banner-text {
     width: 75%;
 }.banner-text {
-    padding-top: 20vw;
+    padding-top:30vw;
 }
 }
 @media(max-width:1024px) {
