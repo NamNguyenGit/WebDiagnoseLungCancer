@@ -991,7 +991,7 @@ a.t-icon span {
     font-weight: 400;
 }
 .border-dot {
-    padding-bottom: 10px;
+    
     border-bottom: 2px dotted #555;
 }
 .menu-item-name h6 {
@@ -1004,8 +1004,16 @@ a.t-icon span {
     color: #323648;
     letter-spacing: 1px;
 }
+.menu-item-price h6:hover{
+    color:  #ffc905;
+}
+
+
 .menu-item-description p {
     font-size: 15px;
+}
+.menu-item{
+    padding: 8px;
 }
 
 /*-- //pricing grids --*/

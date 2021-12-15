@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\RiskFactors;
+use App\Models\Symptoms;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -10,9 +12,11 @@ class HomeController extends Controller
 {
     public function home()
     {
+        $riskfactor = RiskFactors::all();
+        $symptom = Symptoms::all();
         $newblog = Blog::orderByDesc('created_at')->paginate(2);
         $blog = Blog::paginate(4);
-        return view('clients.home', compact('blog', 'newblog'));
+        return view('clients.home', compact('blog', 'newblog', 'riskfactor', 'symptom'));
     }
 
     public function login()
