@@ -463,6 +463,9 @@ nav a,nav a:hover {
     color: #eee;
     background: transparent;
 }
+.menu li a:hover{
+    color: #ffc905;
+}
 
 /* Hide Dropdowns by Default
  * and giving it a position of absolute */
@@ -475,7 +478,7 @@ nav ul ul {
     padding: 10px;
 }
 ul.inner-dropdown a:hover {
-	color: #333;
+	color: #ffc905;
 }
 /* Display Dropdowns on Hover */
 nav ul li:hover > ul {
@@ -1093,7 +1096,7 @@ h4.leave-w3ls {
 .single-w3pvt-page img {
     border-radius: 4px;
     -webkit-border-radius: 4px;
-    -o- border-radius: 4px;
+    border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
 }

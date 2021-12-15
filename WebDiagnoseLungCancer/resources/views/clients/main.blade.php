@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
+
+
 <head>
     <title>Magic Clinic</title>
     <!-- Meta tag Keywords -->
@@ -16,6 +18,8 @@
             window.scrollTo(0, 1);
         }
     </script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="/client/css/bootstrap.css">
     <link rel="stylesheet" href="/client/css/style.css" type="text/css" media="all" />
     <link href="/client/css/font-awesome.css" rel="stylesheet
@@ -31,8 +35,8 @@
             <div class="header d-lg-flex justify-content-between align-items-center">
                 <div class="header-agile">
                     <h1>
-                        <a class="navbar-brand logo" href="index.html">
-                            <span class="fa fa-scissors" aria-hidden="true"></span> Men spa <span class="fa fa-user-secret" aria-hidden="true"></span>
+                        <a class="navbar-brand logo" href="">
+                            <span class="fas fa-lungs" aria-hidden="true"></span> Magic Clinic <span class="fas fa-hand-holding-medical" aria-hidden="true"></span>
                         </a>
                     </h1>
                 </div>
@@ -41,20 +45,22 @@
                         <label for="drop" class="toggle mt-lg-0 mt-1"><span class="fa fa-bars" aria-hidden="true"></span></label>
                         <input type="checkbox" id="drop" />
                         <ul class="menu">
-                            <li class="mr-lg-3 mr-2 active"><a href="index.html">Home</a></li>
-                            <li class="mr-lg-3 mr-2"><a href="about.html">About </a></li>
+                            <li class="mr-lg-3 mr-2 active"><a href="l">Home</a></li>
+                            <li class="mr-lg-3 mr-2"><a href="">About </a></li>
                             <li class="mr-lg-3 mr-2 p-0">
                                 <!-- First Tier Drop Down -->
-                                <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
-                                <a href="#">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                                <label for="drop-2" class="toggle">Role <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                                <a href="#">Role <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                                 <input type="checkbox" id="drop-2" />
                                 <ul class="inner-dropdown">
-                                    <li><a href="services.html">What We Do</a></li>
-                                    <li><a href="single.html">See more</a></li>
+                                    <li><a href="">Admin</a></li>
+                                    <li><a href="">Doctors</a></li>
+                                    <li><a href="">Nurses</a></li>
+                                    <li><a href="">Patients</a></li>
                                 </ul>
                             </li>
-                            <li class="mr-lg-3 mr-2"><a href="gallery.html">Gallery</a></li>
-                            <li class="mr-lg-3 mr-2"><a href="contact.html">Contact Us</a></li>
+                            <li class="mr-lg-3 mr-2"><a href="">Blog</a></li>
+                            <li class="mr-lg-3 mr-2"><a href="">Contact Us</a></li>
 
 
                         </ul>
