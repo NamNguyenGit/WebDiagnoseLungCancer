@@ -52,9 +52,9 @@
                     <div class="bs-slider-overlay1">
                         <div class="banner-text">
                             <div class="container">
-                                <h4 class="movetxt agile-title text-capitalize">We design latest trending haircuts </h4>
+                                <h4 class="movetxt agile-title text-capitalize">We care about your health </h4>
                                 <p>Lung cancer on track to <span class="indexim">38%</span> to <span class="indexim">2.89 million</span> case by 2030.</p>
-                                <a href="contact.html" class="btn"> Get appointment </a>
+                                <a href="contact.html" class="btn">Contact Us </a>
                             </div>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
 </section>
 <section class="pricing py-5">
     <div class="container py-md-5">
-        <h3 class="heading text-capitalize text-center mb-3 mb-sm-5"> Our Pricing</h3>
+        <h3 class="heading text-capitalize text-center mb-3 mb-sm-5">SYMPTOMS OF LUNG CANCER</h3>
         <div class="row pricing-grids">
             <div class="col-lg-6  mb-lg-0 mb-5">
                 <div class="padding">

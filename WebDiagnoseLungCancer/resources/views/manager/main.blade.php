@@ -9,23 +9,23 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
-<link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">
 
-<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
-<link rel="stylesheet" href="/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
 
-<link rel="stylesheet" href="/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
-<link rel="stylesheet" href="/admin/plugins/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="/admin/plugins/jqvmap/jqvmap.min.css">
 
-<link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">
 
-<link rel="stylesheet" href="/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 
-<link rel="stylesheet" href="/admin/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="/admin/plugins/daterangepicker/daterangepicker.css">
 
-<link rel="stylesheet" href="/admin/plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="/admin/plugins/toastr/toastr.min.css">
     @yield("css")
 
 </head>
@@ -71,13 +71,37 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{route('patients.index')}}" class="nav-link">
                                         <i class="fas fa-id-card nav-icon"></i>
                                         <p>Profiles</p>
                                     </a>
                                 </li>
 
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-blog nav-icon"></i>
+                                <p>
+                                    Blogs
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{route('blogs.index')}}" class="nav-link">
+                                        <i class="far fa-list-alt nav-icon"></i>
+                                        <p>Lists</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <i class="fas fa-cog nav-icon"></i>
+                                        <p>Add Blogs</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                 </nav>
             </div>
         </aside>

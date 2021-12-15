@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatientsController;
 use Illuminate\Support\Facades\Route;
@@ -15,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::group(['prefix' => '/'], function () {
+Route::group(['prefix' => 'admin'], function () {
     Route::get('/patients', [PatientsController::class, 'index'])->name('patients.index');
-
+    Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs.index');
 });
 
 Route::group(['prefix' => '/'], function () {
