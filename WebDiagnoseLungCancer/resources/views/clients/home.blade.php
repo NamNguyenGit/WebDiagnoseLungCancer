@@ -2,7 +2,7 @@
 @section('content')
 <div class="banner_w3lspvt" id="home">
     <div class="csslider infinity" id="slider1">
-        <input  type="radio" name="slides" checked="checked" id="slides_1" />
+        <input type="radio" name="slides" checked="checked" id="slides_1" />
         <input type="radio" name="slides" id="slides_2" />
         <input type="radio" name="slides" id="slides_3" />
         <input type="radio" name="slides" id="slides_4" />
@@ -14,7 +14,7 @@
                         <div class="banner-text">
                             <div class="container">
                                 <h2 class="movetxt agile-title text-capitalize">Lung cancer is the most diagnosed cancer at 11.6%</h2>
-                                <p>Lung cancer is the most common cancer worldwide, accounting for more than <span class="indexim"> 1.8 million</span> new cases and <span  class="indexim">700.000 deaths </span>in 2020. </p>
+                                <p>Lung cancer is the most common cancer worldwide, accounting for more than <span class="indexim"> 1.8 million</span> new cases and <span class="indexim">700.000 deaths </span>in 2020. </p>
                                 <a href="" class="btn"> Check your lungs now </a>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                         <div class="banner-text">
                             <div class="container">
                                 <h4 class="movetxt agile-title text-capitalize">We design latest trending haircuts </h4>
-                                <p>Lung cancer on track to <span  class="indexim">38%</span> to <span class="indexim">2.89 million</span> case by 2030.</p>
+                                <p>Lung cancer on track to <span class="indexim">38%</span> to <span class="indexim">2.89 million</span> case by 2030.</p>
                                 <a href="contact.html" class="btn"> Get appointment </a>
                             </div>
                         </div>
@@ -73,14 +73,16 @@
 </div>
 <section class="content-info py-5" id="about">
     <div class="container py-md-5">
-        <h3 class="heading text-center mb-3 mb-sm-5">About us</h3>
+        <h3 class="heading text-center mb-3 mb-sm-5">Our Team</h3>
 
         <div class="info-w3pvt-mid text-center px-lg-5">
 
-            <div class="title-desc text-center px-lg-5">
-                <img src="images/about1.png" alt="news image" class="img-fluid">
-                <p class="px-lg-5">Praesent ullamcorper dui turpis.At vero eos et accusam et justo duo dolores et ea rebum.Integer sit amet mattis quam, sit amet ultricies velit. Praesent ullamcorper dui turpis.
-                    Praesent ullamcorper dui turpis.At vero eos et accusam et justo duo dolores et ea rebum.Integer sit amet mattis quam, sit amet ultricies velit. Praesent ullamcorper dui turpis.</p>
+            <div class="title-desc text-center  px-lg-5">
+
+                <img src="/public/client/images/about.jpg" alt="news image" class="img-fluid">
+                <p>The Lung Cancer Foundation is a charity dedicated to raising awareness and support for those suffering from or at risk of lung cancer, throat cancer and other head and neck cancers, as well as providing assistance and information on living with mouth cancer for families, friends and carers.
+                </p>
+
                 <a class="btn mt-lg-4 mt-3 read scroll" href="#services" role="button">Learn More</a>
             </div>
         </div>
@@ -88,7 +90,7 @@
 </section>
 <section class="services py-5" id="services">
     <div class="container py-md-5">
-        <h3 class="heading text-center mb-3 mb-sm-5">Services</h3>
+        <h3 class="heading text-center mb-3 mb-sm-5">Blogs</h3>
         <div class="row ab-info">
             <div class="col-md-6 ab-content ab-content1">
                 <div class="ab-content-inner">
@@ -119,35 +121,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 ab-content">
-                <div class="ab-content-inner">
-                    <a href="single.html"><img src="images/ser4.jpg" alt="news image" class="img-fluid"></a>
-                    <div class="ab-info-con">
-                        <h4>Bathing</h4>
-                        <a href="single.html" class="read-more two btn m-0 px-3"><span class="fa fa-arrow-circle-o-right"> </span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 ab-content">
-                <div class="ab-content-inner">
-                    <a href="single.html"><img src="images/ser5.jpg" alt="news image" class="img-fluid"></a>
-                    <div class="ab-info-con">
-                        <h4>drying</h4>
-                        <a href="single.html" class="read-more two btn m-0 px-3"><span class="fa fa-arrow-circle-o-right"> </span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 ab-content">
-                <div class="ab-content-inner">
-                    <a href="single.html"><img src="images/ser6.jpg" alt="news image" class="img-fluid"></a>
-                    <div class="ab-info-con">
-                        <h4>Creams</h4>
-                        <a href="single.html" class="read-more two btn m-0 px-3"><span class="fa fa-arrow-circle-o-right"> </span></a>
-                    </div>
-                </div>
 
-
-            </div>
         </div>
     </div>
 </section>
@@ -445,9 +419,9 @@
 @endsection
 @section('css')
 <link rel="stylesheet" href="/client/css/bootstrap.css">
-    <link rel="stylesheet" href="/client/css/style.css" type="text/css" media="all" />
-    <link href="/client/css/font-awesome.css" rel="stylesheet
+<link rel="stylesheet" href="/client/css/style.css" type="text/css" media="all" />
+<link href="/client/css/font-awesome.css" rel="stylesheet
 	">
-    <link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 @endsection
