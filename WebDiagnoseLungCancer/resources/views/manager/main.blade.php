@@ -102,6 +102,29 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-exclamation-triangle nav-icon"></i>
+                                <p>
+                                    Risk Factors
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{route('riskfactors.index')}}" class="nav-link">
+                                        <i class="far fa-list-alt nav-icon"></i>
+                                        <p>Lists</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('riskfactors.create')}}" class="nav-link">
+                                        <i class="fas fa-cog nav-icon"></i>
+                                        <p>Add Risk Factors</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                 </nav>
             </div>
         </aside>

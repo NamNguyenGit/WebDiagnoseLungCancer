@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatientsController;
+use App\Http\Controllers\RiskFactorsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/edit-blog/{id}', [BlogsController::class, 'edit'])->name('blogs.edit');
     Route::put('/edit-blog', [BlogsController::class, 'update'])->name('blogs.update');
     Route::get('/delete-blog/{id}', [BlogsController::class, 'delete'])->name('blogs.delete');
+
+    Route::get('/riskfactors', [RiskFactorsController::class, 'index'])->name('riskfactors.index');
+    Route::get('/add-riskfactor', [RiskFactorsController::class, 'create'])->name('riskfactors.create');
+    Route::post('/add-riskfactor', [RiskFactorsController::class, 'store'])->name('riskfactors.store');
+    Route::get('/edit-riskfactor/{id}', [RiskFactorsController::class, 'edit'])->name('riskfactors.edit');
+    Route::put('/edit-riskfactor', [RiskFactorsController::class, 'update'])->name('riskfactors.update');
+    Route::get('/delete-riskfactor/{id}', [RiskFactorsController::class, 'delete'])->name('riskfactors.delete');
 });
 
 Route::group(['prefix' => '/'], function () {
