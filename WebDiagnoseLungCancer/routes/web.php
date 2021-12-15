@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatientsController;
 use App\Http\Controllers\RiskFactorsController;
+use App\Http\Controllers\SymptomsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +33,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/edit-riskfactor/{id}', [RiskFactorsController::class, 'edit'])->name('riskfactors.edit');
     Route::put('/edit-riskfactor', [RiskFactorsController::class, 'update'])->name('riskfactors.update');
     Route::get('/delete-riskfactor/{id}', [RiskFactorsController::class, 'delete'])->name('riskfactors.delete');
+
+    Route::get('/symptoms', [SymptomsController::class, 'index'])->name('symptoms.index');
+    Route::get('/add-symptom', [SymptomsController::class, 'create'])->name('symptoms.create');
+    Route::post('/add-symptom', [SymptomsController::class, 'store'])->name('symptoms.store');
+    Route::get('/edit-symptom/{id}', [SymptomsController::class, 'edit'])->name('symptoms.edit');
+    Route::put('/edit-symptom', [SymptomsController::class, 'update'])->name('symptoms.update');
+    Route::get('/delete-symptom/{id}', [SymptomsController::class, 'delete'])->name('symptoms.delete');
 });
 
 Route::group(['prefix' => '/'], function () {

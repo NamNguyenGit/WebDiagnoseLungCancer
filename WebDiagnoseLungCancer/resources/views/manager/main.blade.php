@@ -125,6 +125,30 @@
                                 </li>
                             </ul>
                         </li>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-diagnoses nav-icon"></i>
+                                <p>
+                                    Sympstoms
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{route('symptoms.index')}}" class="nav-link">
+                                        <i class="far fa-list-alt nav-icon"></i>
+                                        <p>Lists</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('symptoms.create')}}" class="nav-link">
+                                        <i class="fas fa-cog nav-icon"></i>
+                                        <p>Add Sympstoms</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                 </nav>
             </div>
         </aside>

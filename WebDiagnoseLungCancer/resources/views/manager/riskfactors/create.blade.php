@@ -23,7 +23,7 @@
 
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Risk Factors</h3>
+                            <h3 class="card-title">Add Risk Factors</h3>
                         </div>
 
                         <form method="POST" action="{{route('riskfactors.store')}}" >
