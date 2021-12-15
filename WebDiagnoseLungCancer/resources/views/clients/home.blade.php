@@ -169,17 +169,19 @@
                 <div class="padding">
                     <h3>RISK FACTORS</h3>
                     <!-- Item starts -->
+                    @foreach($riskfactor as $key => $riskfactors)
                     <div class="menu-item">
                         <div class="row border-dot no-gutters">
-                            <div class="col-8 menu-item-name">
-                                <h6>Dye your hair and beard 1</h6>
+                            <div class="col-10 menu-item-name">
+                            <h6>{{$riskfactors->name}}</h6>
                             </div>
-                            <div class="col-4 menu-item-price text-right">
-                                <h6>$27</h6>
+                            <div class="col-2 menu-item-price text-right">
+                            <a href="{{$riskfactors->refer}}"><h6>refer</h6></a>
                             </div>
                         </div>
 
                     </div>
+                    @endforeach
                     <!-- Item ends -->
 
                 </div>
