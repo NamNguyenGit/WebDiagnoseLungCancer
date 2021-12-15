@@ -102,7 +102,7 @@
             @foreach($newblog as $key => $newblogs)
             <div class="col-md-6 ab-content ab-content1">
                 <div class="ab-content-inner">
-                    <a href=""><img src="images/services2.jpg" alt="news image" class="img-fluid"></a>
+                    <a href=""><img src="/img/{{$newblogs->img}}" alt="news image" class="img-fluid"></a>
                     <div class="ab-info-con">
                         <h3 class="p-2 title-blog ">{{$newblogs->smalltitle}}</h3>
                         <h5 class="p-2"> <span class="fas fa-clock"></span> {{$newblogs->publication_date}} </h5>
@@ -120,14 +120,14 @@
         </div>
         <h3 class="heading text-center mb-3 mb-sm-5 pt-5">Related Blogs</h3>
         <div class="row ab-info second mt-lg-4">
-            @foreach($blog as $key => $blog)
+            @foreach($blog as $key => $blogs)
             <div class="col-md-3 ab-content">
                 <div class="ab-content-inner">
-                    <a href="single.html"><img src="images/ser3.jpg" alt="news image" class="img-fluid"></a>
+                    <a href=""><img src="/img/{{$blogs->img}}" alt="news image" class="img-fluid"></a>
                     <div class="ab-info-con">
-                        <h3 class="title-smallblog">{{$blog->smalltitle}}</h3>
-                        <h6 class="p-1"> <span class="fas fa-clock"></span> {{$blog->publication_date}} </h6>
-                        <h6 class="p-1"> <span class="fas fa-user"></span> {{$blog->author}}</h6>
+                        <h3 class="title-smallblog">{{$blogs->smalltitle}}</h3>
+                        <h6 class="p-1"> <span class="fas fa-clock"></span> {{$blogs->publication_date}} </h6>
+                        <h6 class="p-1"> <span class="fas fa-user"></span> {{$blogs->author}}</h6>
                         <a href="">
                             <div class="pt-1" style="text-align: center; ">
                                 <button class="btn btn-readmore ">Read More</button>

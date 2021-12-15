@@ -35,7 +35,7 @@
             <div class="header d-lg-flex justify-content-between align-items-center">
                 <div class="header-agile">
                     <h1>
-                        <a class="navbar-brand logo" href="">
+                        <a class="navbar-brand logo" href="{{route('clients.home')}}">
                             <span class="fas fa-lungs" aria-hidden="true"></span> Magic Clinic <span class="fas fa-hand-holding-medical" aria-hidden="true"></span>
                         </a>
                     </h1>

@@ -747,8 +747,9 @@ li.breadcrumb-item a {
 .ab-content-inner {
     padding: 2em 1em;
     background: #fff;
-    height: 300px;
+    height: 500px;
 }
+
 
 .title-blog {
     text-align: center;
@@ -770,10 +771,15 @@ li.breadcrumb-item a {
 
 .ab-content img {
 
-    width: 68%;
+    height: 45%;
+    width: 75%;
+    display: block;
+    margin: auto;
 }
 .ab-content1 img {
-    width: 100%;
+    width: 30%;
+    display: block;
+    margin: auto;
 }
 .ab-content-inner {
     padding: 2em 1em;
