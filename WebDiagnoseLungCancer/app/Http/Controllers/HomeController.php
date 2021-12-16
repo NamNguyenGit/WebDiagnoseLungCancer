@@ -41,10 +41,7 @@ class HomeController extends Controller
         return redirect()->route('clients.login');
     }
 
-    public function admin()
-    {
-        return view('clients.admin-only');
-    }
+    
 
     public function contactus()
     {

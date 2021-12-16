@@ -14,12 +14,12 @@
             setTimeout(hideURLbar, 0);
         }, false);
 
-         function hideURLbar() {
+        function hideURLbar() {
             window.scrollTo(0, 1);
         }
     </script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="/client/css/bootstrap.css">
     <link rel="stylesheet" href="/client/css/style.css" type="text/css" media="all" />
     <link href="/client/css/font-awesome.css" rel="stylesheet
@@ -29,6 +29,7 @@
     @yield('css')
 
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -61,7 +62,7 @@
                             </li>
                             <li class="mr-lg-3 mr-2"><a href="">Blog</a></li>
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.contact')}}">Contact Us</a></li>
-                            <li><a class="nav-link " href="{{route('clients.login')}}">Log in</a></li>
+                            <li class="mr-lg-3 mr-2"> <a href="{{route('clients.login')}}">Log in</a></li>
 
 
                         </ul>
@@ -84,7 +85,7 @@
                         </h2>
                         <p class="my-3">Lung cancer is a type of cancer that begins in the lungs. Your lungs are two spongy organs in your chest that take in oxygen when you inhale and release carbon dioxide when you exhale. Lung cancer is the leading cause of cancer deaths worldwide</p>
                         <p>
-                        The promotion, protection and education of good health is key to raising awareness of mouth cancer. The charity aims to inform the public about the signs, symptoms, facts and figures and key causes of mouth cancer. Know what increases your risk of getting the disease by accessing our information on HPV, alcohol and smoking.
+                            The promotion, protection and education of good health is key to raising awareness of mouth cancer. The charity aims to inform the public about the signs, symptoms, facts and figures and key causes of mouth cancer. Know what increases your risk of getting the disease by accessing our information on HPV, alcohol and smoking.
                         </p>
                     </div>
                     <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
