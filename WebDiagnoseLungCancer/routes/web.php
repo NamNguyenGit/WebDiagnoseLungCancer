@@ -48,7 +48,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 
 Route::group(['prefix' => '/'], function () {
     Route::get('/', [HomeController::class, 'home'])->name('clients.home');
-    Route::get('/login', [HomeController::class, 'login']);
+    Route::get('/login', [HomeController::class, 'login'])->name('clients.login');
     Route::post('/login', [HomeController::class, 'check_login'])->name('clients.login');
     Route::get('/logout', [HomeController::class, 'logout'])->name('clients.logout');
 

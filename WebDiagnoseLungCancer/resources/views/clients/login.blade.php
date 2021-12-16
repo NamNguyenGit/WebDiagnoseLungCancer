@@ -2,81 +2,60 @@
 <html lang="en">
 
 <head>
-
+    <title>Welcome to Magic Clinic</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/admin/login/fonts/icomoon/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/admin/login/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="/login/css/style.css">
 
-    <link rel="stylesheet" href="/admin/login/css/bootstrap.min.css">
-
-
-    <link rel="stylesheet" href="/admin/login/css/style.css">
-
-    <title>Login</title>
 </head>
 
-<body>
-
-
-
-    <div class="content">
+<body class="img js-fullheight" style="background-image: url(./login/images/bg.jpg);">
+    <section class="ftco-section">
         <div class="container">
+
             <div class="row justify-content-center">
-                <div class="col-md-6 contents">
-                    <div class="row justify-content-center">
-                        <div class="col-md-12">
-                            <div class="form-block">
-                                <div class="mb-4 text-center">
-                                    <h3>Sign In </h3>
-
-                                </div>
-                                <form action="{{route('clients.login')}}" method="POST" role="form">
-                                    @csrf
-                                    <div class="form-group first">
-                                        <label for="email">Email</label>
-                                        <input type="text" class="form-control" name="email" id="email">
-
-                                    </div>
-                                    <div class="form-group last mb-4">
-                                        <label for="password">Password</label>
-                                        <input type="password" class="form-control" name="password" id="password">
-
-                                    </div>
-
-                                    <div class="d-flex mb-5 align-items-center">
-                                        <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
-                                            <input type="checkbox" name="remember" />
-                                            <div class="control__indicator"></div>
-                                        </label>
-
-                                    </div>
-
-                                    <input type="submit" value="Log In" class="btn btn-pill text-white btn-block btn-primary">
-                                                
-
-                                    </a>
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-wrap p-0">
+                        <h3 class="mb-4 text-center">Have an account?</h3>
+                        <form action="{{route('clients.login')}}" method="POST" role="form" class="signin-form">
+                            @csrf
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="email" placeholder="Email">
                             </div>
-                            </form>
-                        </div>
+                            <div class="form-group">
+                                <input id="password-field" type="password" name="password" class="form-control" placeholder="Password">
+                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+                            </div>
+                            <div class="form-group d-md-flex">
+                                <div class="w-50">
+                                    <label class="checkbox-wrap checkbox-primary">Remember Me
+                                        <input name="remember" type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </form>
+
                     </div>
                 </div>
-
             </div>
-
         </div>
-    </div>
-    </div>
+    </section>
 
+    <script src="/login/js/jquery.min.js"></script>
+    <script src="/login/js/popper.js"></script>
+    <script src="/login/js/bootstrap.min.js"></script>
+    <script src="/login/js/main.js"></script>
 
-    <script src="/admin/login/js/jquery-3.3.1.min.js"></script>
-    <script src="/admin/login/js/popper.min.js"></script>
-    <script src="/admin/login/js/bootstrap.min.js"></script>
-    <script src="/admin/login/js/main.js"></script>
 </body>
 
 </html>
