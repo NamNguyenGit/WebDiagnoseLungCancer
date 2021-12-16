@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
@@ -19,31 +20,37 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
-    Route::get('/patients', [PatientsController::class, 'index'])->name('patients.index');
-    Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs.index');
-    Route::get('/add-blog', [BlogsController::class, 'create'])->name('blogs.create');
-    Route::post('/add-blog', [BlogsController::class, 'store'])->name('blogs.store');
-    Route::get('/edit-blog/{id}', [BlogsController::class, 'edit'])->name('blogs.edit');
-    Route::put('/edit-blog', [BlogsController::class, 'update'])->name('blogs.update');
-    Route::get('/delete-blog/{id}', [BlogsController::class, 'delete'])->name('blogs.delete');
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/manager', [AdminController::class, 'index'])->name('manager.index');
+    Route::get('/patients', [PatientsController::class, 'index'])->name('patients.index')->middleware('doctor');
 
-    Route::get('/riskfactors', [RiskFactorsController::class, 'index'])->name('riskfactors.index');
-    Route::get('/add-riskfactor', [RiskFactorsController::class, 'create'])->name('riskfactors.create');
-    Route::post('/add-riskfactor', [RiskFactorsController::class, 'store'])->name('riskfactors.store');
-    Route::get('/edit-riskfactor/{id}', [RiskFactorsController::class, 'edit'])->name('riskfactors.edit');
-    Route::put('/edit-riskfactor', [RiskFactorsController::class, 'update'])->name('riskfactors.update');
-    Route::get('/delete-riskfactor/{id}', [RiskFactorsController::class, 'delete'])->name('riskfactors.delete');
+    Route::group(['prefix' => '/', 'middleware' => 'admin'], function () {
+        Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs.index');
+        Route::get('/add-blog', [BlogsController::class, 'create'])->name('blogs.create');
+        Route::post('/add-blog', [BlogsController::class, 'store'])->name('blogs.store');
+        Route::get('/edit-blog/{id}', [BlogsController::class, 'edit'])->name('blogs.edit');
+        Route::put('/edit-blog', [BlogsController::class, 'update'])->name('blogs.update');
+        Route::get('/delete-blog/{id}', [BlogsController::class, 'delete'])->name('blogs.delete');
 
-    Route::get('/symptoms', [SymptomsController::class, 'index'])->name('symptoms.index');
-    Route::get('/add-symptom', [SymptomsController::class, 'create'])->name('symptoms.create');
-    Route::post('/add-symptom', [SymptomsController::class, 'store'])->name('symptoms.store');
-    Route::get('/edit-symptom/{id}', [SymptomsController::class, 'edit'])->name('symptoms.edit');
-    Route::put('/edit-symptom', [SymptomsController::class, 'update'])->name('symptoms.update');
-    Route::get('/delete-symptom/{id}', [SymptomsController::class, 'delete'])->name('symptoms.delete');
+        Route::get('/riskfactors', [RiskFactorsController::class, 'index'])->name('riskfactors.index');
+        Route::get('/add-riskfactor', [RiskFactorsController::class, 'create'])->name('riskfactors.create');
+        Route::post('/add-riskfactor', [RiskFactorsController::class, 'store'])->name('riskfactors.store');
+        Route::get('/edit-riskfactor/{id}', [RiskFactorsController::class, 'edit'])->name('riskfactors.edit');
+        Route::put('/edit-riskfactor', [RiskFactorsController::class, 'update'])->name('riskfactors.update');
+        Route::get('/delete-riskfactor/{id}', [RiskFactorsController::class, 'delete'])->name('riskfactors.delete');
 
-    Route::get('/contactus', [ContactController::class, 'index'])->name('contactus.index');
-    Route::post('/editstatuscontact', [ContactController::class, 'editstatus'])->name('contactus.editstatus');
+        Route::get('/symptoms', [SymptomsController::class, 'index'])->name('symptoms.index');
+        Route::get('/add-symptom', [SymptomsController::class, 'create'])->name('symptoms.create');
+        Route::post('/add-symptom', [SymptomsController::class, 'store'])->name('symptoms.store');
+        Route::get('/edit-symptom/{id}', [SymptomsController::class, 'edit'])->name('symptoms.edit');
+        Route::put('/edit-symptom', [SymptomsController::class, 'update'])->name('symptoms.update');
+        Route::get('/delete-symptom/{id}', [SymptomsController::class, 'delete'])->name('symptoms.delete');
+    });
+
+    Route::group(['prefix' => '/', 'middleware' => 'nodoctor'], function () {
+        Route::get('/contactus', [ContactController::class, 'index'])->name('contactus.index');
+        Route::post('/editstatuscontact', [ContactController::class, 'editstatus'])->name('contactus.editstatus');
+    });
 });
 
 Route::group(['prefix' => '/'], function () {

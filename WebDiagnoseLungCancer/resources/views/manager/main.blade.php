@@ -55,7 +55,7 @@
                         <img src="/manager/patients/dist/img/adminavata.png" class="img-circle elevation-2">
                     </div>
                     <div class="text-white text-center pt-1 ml-3">
-                        Hi Admin
+                        Hi {{auth()->user()->name}}
                     </div>
                 </div>
                 <nav class="mt-2">
@@ -65,11 +65,10 @@
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Home
-
-
                                 </p>
                             </a>
                         </li>
+                        @if(auth()->user()->role==1 || auth()->user()->role==2  )
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <i class="nav-icon fas fa-procedures"></i>
@@ -89,6 +88,8 @@
 
                             </ul>
                         </li>
+                        @endif
+                        @if(auth()->user()->role==1)
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <i class="fas fa-blog nav-icon"></i>
@@ -112,6 +113,7 @@
                                 </li>
                             </ul>
                         </li>
+
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <i class="fas fa-exclamation-triangle nav-icon"></i>
@@ -159,6 +161,8 @@
                                 </li>
                             </ul>
                         </li>
+                        @endif
+                        @if(auth()->user()->role==1 || auth()->user()->role==3  )
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <i class="nav-icon fa fa-envelope-open"></i>
@@ -178,6 +182,8 @@
 
                             </ul>
                         </li>
+                        @endif
+
                 </nav>
             </div>
         </aside>

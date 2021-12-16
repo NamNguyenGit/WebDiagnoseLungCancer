@@ -48,21 +48,24 @@
                         <ul class="menu">
                             <li class="mr-lg-3 mr-2 active"><a href="l">Home</a></li>
                             <li class="mr-lg-3 mr-2"><a href="">About </a></li>
-                            <li class="mr-lg-3 mr-2 p-0">
-                                <!-- First Tier Drop Down -->
-                                <label for="drop-2" class="toggle">Role <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
-                                <a href="#">Role <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                                <input type="checkbox" id="drop-2" />
-                                <ul class="inner-dropdown">
-                                    <li><a href="{{route('patients.index')}}">Admin</a></li>
-                                    <li><a href="">Doctors</a></li>
-                                    <li><a href="">Nurses</a></li>
-                                    <li><a href="">Patients</a></li>
-                                </ul>
-                            </li>
+                            <li class="mr-lg-3 mr-2"><a href="{{route('manager.index')}}">Manager </a></li>
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.blog')}}">Blog</a></li>
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.contact')}}">Contact Us</a></li>
-                            <li class="mr-lg-3 mr-2"> <a href="{{route('clients.login')}}">Log in</a></li>
+
+                            @if(auth()->check())
+                            <li class="mr-lg-3 mr-2 " style="color:white">Hi {{auth()->user()->name}}</li>
+
+                            <li class="mr-lg-3 mr-2"><a href="{{route('clients.logout')}}">Log out</a></li>
+
+                            @else
+                            <li class="mr-lg-3 mr-2"><a href="{{route('clients.login')}}">Log in</a></li>
+
+
+                            @endif
+
+
+
+
 
 
                         </ul>

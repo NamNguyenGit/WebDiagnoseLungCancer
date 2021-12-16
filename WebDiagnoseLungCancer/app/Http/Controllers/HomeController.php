@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\contactus\CreateValidate;
 use App\Models\Blog;
 use App\Models\Contact;
+use App\Models\patients;
 use App\Models\RiskFactors;
 use App\Models\Symptoms;
 use Illuminate\Http\Request;
@@ -23,6 +24,9 @@ class HomeController extends Controller
 
     public function login()
     {
+        if (Auth::check()) {
+            return redirect()->route('clients.home');
+        }
         return view('clients.login');
     }
 
@@ -72,4 +76,5 @@ class HomeController extends Controller
         return view('clients.blogdetail', compact('blog'));
     }
 
+    
 }
