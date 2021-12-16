@@ -54,4 +54,7 @@ Route::group(['prefix' => '/'], function () {
 
     Route::get('/contactus', [HomeController::class, 'contactus'])->name('clients.contact');
     Route::post('/contactus', [HomeController::class, 'postcontactus'])->name('clients.contact');
+
+    Route::get('/blogs', [HomeController::class, 'blog'])->name('clients.blog');
+    Route::get('/blogdetail/{id}', [HomeController::class, 'detailblog'])->name('clients.blogdetail');
 });

@@ -41,7 +41,7 @@
                             <div class="container">
                                 <h2 class="movetxt agile-title text-capitalize"><span>1 in 5 </span> cancer deaths are from lung cancer</h2>
                                 <p>About 80% of lung cancer death result from <span class="indexim">smoking tobacco </span>.</p>
-                                <a href="contact.html" class="btn"> No Smoking</a>
+                                <a href="{{route('clients.blog')}}" class="btn"> No Smoking</a>
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                             <div class="container">
                                 <h4 class="movetxt agile-title text-capitalize">We care about your health </h4>
                                 <p>Lung cancer on track to <span class="indexim">38%</span> to <span class="indexim">2.89 million</span> case by 2030.</p>
-                                <a href="contact.html" class="btn">Contact Us </a>
+                                <a href="{{route('clients.contact')}}" class="btn">Contact Us </a>
                             </div>
                         </div>
                     </div>

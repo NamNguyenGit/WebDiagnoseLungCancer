@@ -41,8 +41,6 @@ class HomeController extends Controller
         return redirect()->route('clients.login');
     }
 
-    
-
     public function contactus()
     {
         return view('clients.contactus');
@@ -60,6 +58,18 @@ class HomeController extends Controller
         } else {
             return redirect()->route('clients.contact')->with('fail', 'Sent fail');
         }
+    }
+
+    public function blog()
+    {
+        $blog = Blog::all();
+        return view('clients.blogs', compact('blog'));
+    }
+
+    public function detailblog($id)
+    {
+        $blog = Blog::where('id', $id)->first();
+        return view('clients.blogdetail', compact('blog'));
     }
 
 }
