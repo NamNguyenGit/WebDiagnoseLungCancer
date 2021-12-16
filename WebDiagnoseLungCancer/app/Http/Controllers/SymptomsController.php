@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\symptom\CrateValidate;
+use App\Http\Requests\symptom\UpdateValidate;
 use App\Models\Symptoms;
-use Illuminate\Http\Request;
 
 class SymptomsController extends Controller
 {
@@ -18,7 +19,7 @@ class SymptomsController extends Controller
     {
         return view('manager.symptoms.create');
     }
-    public function store(Request $request)
+    public function store(CrateValidate $request)
     {
 
         $add = Symptoms::create([
@@ -39,7 +40,7 @@ class SymptomsController extends Controller
         return view('manager.symptoms.update', compact('symptoms'));
     }
 
-    public function update(Request $request)
+    public function update(UpdateValidate $request)
     {
 
         $edit = Symptoms::where('id', $request->id)->update([

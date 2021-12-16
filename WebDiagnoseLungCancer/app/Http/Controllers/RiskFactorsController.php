@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\riskfactor\CreateValidate;
+use App\Http\Requests\riskfactor\UpdateValidate;
 use App\Models\RiskFactors;
-use Illuminate\Http\Request;
 
 class RiskFactorsController extends Controller
 {
@@ -18,7 +19,7 @@ class RiskFactorsController extends Controller
     {
         return view('manager.riskfactors.create');
     }
-    public function store(Request $request)
+    public function store(CreateValidate $request)
     {
 
         $add = RiskFactors::create([
@@ -39,7 +40,7 @@ class RiskFactorsController extends Controller
         return view('manager.riskfactors.update', compact('riskfactors'));
     }
 
-    public function update(Request $request)
+    public function update(UpdateValidate $request)
     {
 
         $edit = RiskFactors::where('id', $request->id)->update([

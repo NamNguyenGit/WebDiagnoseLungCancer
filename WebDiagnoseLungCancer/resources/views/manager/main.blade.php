@@ -140,7 +140,7 @@
                             <a href="" class="nav-link">
                                 <i class="fas fa-diagnoses nav-icon"></i>
                                 <p>
-                                    Sympstoms
+                                    Symptoms
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -154,7 +154,7 @@
                                 <li class="nav-item">
                                     <a href="{{route('symptoms.create')}}" class="nav-link">
                                         <i class="fas fa-cog nav-icon"></i>
-                                        <p>Add Sympstoms</p>
+                                        <p>Add Symptoms</p>
                                     </a>
                                 </li>
                             </ul>
