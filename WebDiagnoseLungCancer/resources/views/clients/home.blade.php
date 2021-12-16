@@ -121,7 +121,7 @@
         <h3 class="heading text-center mb-3 mb-sm-5 pt-5">Related Blogs</h3>
         <div class="row ab-info second mt-lg-4">
             @foreach($blog as $key => $blogs)
-            <div class="col-md-3 ab-content">
+            <div class="col-md-4 ab-content">
                 <div class="ab-content-inner">
                     <a href=""><img src="/img/{{$blogs->img}}" alt="news image" class="img-fluid"></a>
                     <div class="ab-info-con">

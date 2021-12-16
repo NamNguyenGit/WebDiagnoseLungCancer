@@ -15,7 +15,7 @@ class HomeController extends Controller
         $riskfactor = RiskFactors::all();
         $symptom = Symptoms::all();
         $newblog = Blog::orderByDesc('created_at')->paginate(2);
-        $blog = Blog::paginate(4);
+        $blog = Blog::paginate(3);
         return view('clients.home', compact('blog', 'newblog', 'riskfactor', 'symptom'));
     }
 
