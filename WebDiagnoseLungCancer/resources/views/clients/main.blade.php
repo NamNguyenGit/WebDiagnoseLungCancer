@@ -60,7 +60,7 @@
                                 </ul>
                             </li>
                             <li class="mr-lg-3 mr-2"><a href="">Blog</a></li>
-                            <li class="mr-lg-3 mr-2"><a href="">Contact Us</a></li>
+                            <li class="mr-lg-3 mr-2"><a href="{{route('clients.contact')}}">Contact Us</a></li>
 
 
                         </ul>

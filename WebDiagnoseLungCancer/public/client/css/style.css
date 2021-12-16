@@ -680,6 +680,11 @@ h3.heading {
 .breadcrumb-item {
     letter-spacing: 2px;
 }
+.breadcrumb-agile{
+    padding-top: 32px;
+}
+
+
 /*-- inner page banner --*/
 .inner-page-banner {
     background: url(../images/ban1.jpg) no-repeat;
@@ -1235,7 +1240,7 @@ a.w3pvt_google {
 }
 
 .form-group textarea {
-    min-height: 16em;
+    min-height: 10em;
     border: 1px solid #ddd;
     background: #F9FAFF;
 }

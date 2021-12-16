@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\contactus\CreateValidate;
 use App\Models\Blog;
+use App\Models\Contact;
 use App\Models\RiskFactors;
 use App\Models\Symptoms;
 use Illuminate\Http\Request;
@@ -42,6 +44,25 @@ class HomeController extends Controller
     public function admin()
     {
         return view('clients.admin-only');
+    }
+
+    public function contactus()
+    {
+        return view('clients.contactus');
+    }
+
+    public function postcontactus(CreateValidate $request)
+    {
+        $add = Contact::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'messages' => $request->messages,
+        ]);
+        if ($add) {
+            return redirect()->route('clients.contact')->with('success', 'Sent successful');
+        } else {
+            return redirect()->route('clients.contact')->with('fail', 'Sent fail');
+        }
     }
 
 }

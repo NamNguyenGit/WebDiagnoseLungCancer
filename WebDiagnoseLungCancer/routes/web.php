@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatientsController;
 use App\Http\Controllers\RiskFactorsController;
@@ -40,6 +41,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/edit-symptom/{id}', [SymptomsController::class, 'edit'])->name('symptoms.edit');
     Route::put('/edit-symptom', [SymptomsController::class, 'update'])->name('symptoms.update');
     Route::get('/delete-symptom/{id}', [SymptomsController::class, 'delete'])->name('symptoms.delete');
+
+    Route::get('/contactus', [ContactController::class, 'index'])->name('contactus.index');
+    Route::post('/editstatuscontact', [ContactController::class, 'editstatus'])->name('contactus.editstatus');
 });
 
 Route::group(['prefix' => '/'], function () {
@@ -47,8 +51,7 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/login', [HomeController::class, 'login']);
     Route::post('/login', [HomeController::class, 'check_login'])->name('clients.login');
     Route::get('/logout', [HomeController::class, 'logout'])->name('clients.logout');
-});
 
-Route::group(['prefix' => '/admin-only', 'middleware' => 'admin'], function () {
-    Route::get('/', [HomeController::class, 'admin'])->name('admin');
+    Route::get('/contactus', [HomeController::class, 'contactus'])->name('clients.contact');
+    Route::post('/contactus', [HomeController::class, 'postcontactus'])->name('clients.contact');
 });
