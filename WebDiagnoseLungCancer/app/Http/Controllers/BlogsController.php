@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\blog\CreateValidate;
+use App\Http\Requests\blog\UpdateValidate;
 use App\Models\Blog;
-use Illuminate\Http\Request;
 
 class BlogsController extends Controller
 {
@@ -18,7 +19,7 @@ class BlogsController extends Controller
     {
         return view('manager.blogs.create');
     }
-    public function store(Request $request)
+    public function store(CreateValidate $request)
     {
         if ($request->hasFile('file_upload')) {
             $file_name = $request->file_upload->getClientOriginalName();
@@ -48,7 +49,7 @@ class BlogsController extends Controller
         return view('manager.blogs.update', compact('blogs'));
     }
 
-    public function update(Request $request)
+    public function update(UpdateValidate $request)
     {
         if ($request->hasFile('file_upload')) {
             $file_name = $request->file_upload->getClientOriginalName();

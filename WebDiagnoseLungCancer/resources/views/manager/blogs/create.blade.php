@@ -40,7 +40,7 @@
                                 <div class="form-group">
                                     <label>Small Title</label>
                                     <input placeholder="Small Title"  name="smalltitle" type="text" class="form-control">
-                                    @error('small-title')
+                                    @error('smalltitle')
                                     <small class="help-block text-danger">{{$message}}</small>
                                     @enderror
                                 </div>
@@ -69,7 +69,7 @@
                                     <label for="">Image</label>
 
                                     <input type="file" name="file_upload" class="form-control">
-                                    @error('img')
+                                    @error('file_upload')
                                     <small class="help-block text-danger">{{$message}}</small>
                                     @enderror
                                 </div>
