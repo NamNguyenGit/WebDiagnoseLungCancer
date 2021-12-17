@@ -59,6 +59,7 @@
 
                             @else
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.login')}}">Log in</a></li>
+                            <li><a class="mr-lg-3 mr-2" href="{{route('clients.register')}}">Register</a></li>
 
 
                             @endif

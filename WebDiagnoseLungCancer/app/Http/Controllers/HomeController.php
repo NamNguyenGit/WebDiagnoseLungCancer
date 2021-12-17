@@ -3,16 +3,41 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\contactus\CreateValidate;
+use App\Http\Requests\RegisterRequest;
 use App\Models\Blog;
 use App\Models\Contact;
-use App\Models\patients;
 use App\Models\RiskFactors;
 use App\Models\Symptoms;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+
+    public function register()
+    {
+        if (Auth::check()) {
+            return redirect()->route('clients.home');
+        } else {
+            return view('clients.register');
+        }
+    }
+    //post register
+    public function postregister(RegisterRequest $request)
+    {
+        $add = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
+        if ($add) {
+            return redirect()->route('clients.login')->with('success', 'Register successful');
+        } else {
+            return redirect()->route('clients.login')->with('fail', 'Register fail');
+        }
+    }
+
     public function home()
     {
         $riskfactor = RiskFactors::all();
@@ -57,6 +82,7 @@ class HomeController extends Controller
             'email' => $request->email,
             'messages' => $request->messages,
         ]);
+
         if ($add) {
             return redirect()->route('clients.contact')->with('success', 'Sent successful');
         } else {
@@ -76,5 +102,4 @@ class HomeController extends Controller
         return view('clients.blogdetail', compact('blog'));
     }
 
-    
 }

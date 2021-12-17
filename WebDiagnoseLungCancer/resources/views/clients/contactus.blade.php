@@ -82,7 +82,7 @@
 <script>
     toastr.options = {
         "debug": false,
-        "positionClass": "toast-top-center",
+        "positionClass": "toast-bottom-full-width",
         "fadeIn": 300,
         "fadeOut": 1000,
         "timeOut": 3000,
