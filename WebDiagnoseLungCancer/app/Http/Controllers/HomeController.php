@@ -102,4 +102,9 @@ class HomeController extends Controller
         return view('clients.blogdetail', compact('blog'));
     }
 
+    public function about()
+    {
+        return view('clients.about');
+    }
+
 }

@@ -47,7 +47,7 @@
                         <input type="checkbox" id="drop" />
                         <ul class="menu">
                             <li class="mr-lg-3 mr-2 active"><a href="l">Home</a></li>
-                            <li class="mr-lg-3 mr-2"><a href="">About </a></li>
+                            <li class="mr-lg-3 mr-2"><a href="{{route('clients.about')}}">About </a></li>
                             <li class="mr-lg-3 mr-2"><a href="{{route('manager.index')}}">Manager </a></li>
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.blog')}}">Blog</a></li>
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.contact')}}">Contact Us</a></li>

@@ -7,9 +7,9 @@
     <div class="breadcrumb-agile">
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item">
-                <a href="index.html">Home</a>
+                <a href="{{route('clients.home')}}">Home</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">Blog detail</li>
+            <li class="breadcrumb-item active" aria-current="page">Blog Detail</li>
         </ol>
     </div>
     <div class="container py-md-5">
@@ -18,35 +18,35 @@
         <div class="single-w3pvt-page mt-md-5 mt-4 px-lg-5">
             <div class="content-sing-w3ls px-lg-5">
                 <h5 class="p-1"> <span class="fas fa-clock"></span> {{$blog->publication_date}} </h6>
-                <h5 class="p-1"> <span class="fas fa-user"></span> {{$blog->author}}</h5>
-                <h4>{{$blog->smalltitle}}</h4>
-                <p>{{$blog->content}}</p>
+                    <h5 class="p-1"> <span class="fas fa-user"></span> {{$blog->author}}</h5>
+                    <h4>{{$blog->smalltitle}}</h4>
+                    <p>{{$blog->content}}</p>
 
-                <ul class="w3ls_social_list list-unstyled mt-4">
-                    <li class="lead">
-                        Catch On Social :
-                    </li>
-                    <li>
-                        <a href="#" class="w3pvt_facebook">
-                            <span class="fa fa-facebook-f"></span>
-                        </a>
-                    </li>
-                    <li class="mx-2">
-                        <a href="#" class="w3pvt_twitter">
-                            <span class="fa fa-twitter"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="w3pvt_dribble">
-                            <span class="fa fa-dribbble"></span>
-                        </a>
-                    </li>
-                    <li class="ml-2">
-                        <a href="#" class="w3pvt_google">
-                            <span class="fa fa-google-plus"></span>
-                        </a>
-                    </li>
-                </ul>
+                    <ul class="w3ls_social_list list-unstyled mt-4">
+                        <li class="lead">
+                            Catch On Social :
+                        </li>
+                        <li>
+                            <a href="#" class="w3pvt_facebook">
+                                <span class="fa fa-facebook-f"></span>
+                            </a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="#" class="w3pvt_twitter">
+                                <span class="fa fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="w3pvt_dribble">
+                                <span class="fa fa-dribbble"></span>
+                            </a>
+                        </li>
+                        <li class="ml-2">
+                            <a href="#" class="w3pvt_google">
+                                <span class="fa fa-google-plus"></span>
+                            </a>
+                        </li>
+                    </ul>
 
 
 
