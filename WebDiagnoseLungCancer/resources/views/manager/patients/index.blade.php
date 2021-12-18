@@ -23,7 +23,6 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-
                         <th>Date of Birth</th>
                         <th>Address</th>
                         <th>Phone</th>
@@ -37,13 +36,12 @@
                     <tr>
                         <td>{{$patient->id}}</td>
                         <td>{{$patient->joinuser->name}}</td>
-
-                        <td>{{$patient->dateofbirth}}</td>
+                        <td>{{date('d-m-Y',strtotime($patient->dateofbirth))}}</td>
                         <td>{{$patient->address}}</td>
                         <td>{{$patient->phone}}</td>
                         <td>{{$patient->symptoms}}</td>
-                        <td>{{$patient->date_diagnosis}}</td>
-                        <td>{{$patient->date_ctscan}}</td>
+                        <td>{{date('d-m-Y',strtotime($patient->date_diagnosis))}}</td>
+                        <td>{{date('d-m-Y',strtotime($patient->date_ctscan))}}</td>
                     </tr>
                     @endforeach
                 </tbody>

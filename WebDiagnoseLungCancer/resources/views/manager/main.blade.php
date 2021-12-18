@@ -46,7 +46,7 @@
 
             <a href="" class="brand-link">
                 <img src="/manager/patients/dist/img/adminlg.png" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Admin</span>
+                <span class="brand-text font-weight-light">Manager</span>
             </a>
 
             <div class="sidebar">
