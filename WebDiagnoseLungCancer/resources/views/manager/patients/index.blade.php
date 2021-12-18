@@ -23,7 +23,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Age</th>
+
                         <th>Date of Birth</th>
                         <th>Address</th>
                         <th>Phone</th>
@@ -36,8 +36,8 @@
                     @foreach($patients as $key => $patient)
                     <tr>
                         <td>{{$patient->id}}</td>
-                        <td>{{$patient->name}}</td>
-                        <td>{{$patient->age}}</td>
+                        <td>{{$patient->joinuser->name}}</td>
+
                         <td>{{$patient->dateofbirth}}</td>
                         <td>{{$patient->address}}</td>
                         <td>{{$patient->phone}}</td>

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -20,8 +20,7 @@ class patients extends Authenticatable
     protected $table = 'patients';
     protected $fillable = [
         'id',
-        'name',
-        'age',
+        'user_id',
         'dateofbirth',
         'address',
         'phone',
@@ -30,6 +29,11 @@ class patients extends Authenticatable
         'date_ctscan',
 
     ];
+
+    public function joinuser()
+    {
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
 
     /**
      * The attributes that should be hidden for serialization.
