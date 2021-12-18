@@ -13,20 +13,7 @@
 
 
     <section class="band row m-0 text-center align-items-xxl-center">
-        <div class="
-          col-lg-7 col-xl-8
-          equalheight
-          bg-white
-          pt-3
-          pb-2
-          p-md-4
-          pb-md-2
-          p-lg-4
-          pb-lg-2
-          p-xl-5
-          pb-xl-3
-          text-lg-left
-        ">
+        <div class="col-lg-7 col-xl-8 equalheight bg-white pt-3 pb-2 p-md-4 pb-md-2 p-lg-4 pb-lg-2 p-xl-5 pb-xl-3 text-lg-left">
             <h2 class="sub-title1 text-primary mb-1" style="color: #ffc905 !important ;">
                 Friday 1<sup>st</sup> October to Tuesday 30<sup>th</sup> November 2021
             </h2>

@@ -84,7 +84,7 @@
                 </p>
 
 
-                <a href="">
+                <a href="{{route('clients.about')}}">
                     <div>
                     <button class="btn btn-lg  btn-readmore mt-lg-4 mt-3 read scroll ">Learn More</button>
                     </div>
@@ -107,7 +107,7 @@
                         <h3 class="p-2 title-blog ">{{$newblogs->smalltitle}}</h3>
                         <h5 class="p-2"> <span class="fas fa-clock"></span> {{$newblogs->publication_date}} </h5>
                         <h5 class="p-2"> <span class="fas fa-user"></span> {{$newblogs->author}}</h5>
-                        <a href="">
+                        <a href="{{route('clients.blogdetail',$newblogs->id)}}">
                             <div style="text-align: center;">
                                 <button class="btn btn-readmore ">Read More</button>
                             </div>
@@ -128,7 +128,7 @@
                         <h3 class="title-smallblog">{{$blogs->smalltitle}}</h3>
                         <h6 class="p-1"> <span class="fas fa-clock"></span> {{$blogs->publication_date}} </h6>
                         <h6 class="p-1"> <span class="fas fa-user"></span> {{$blogs->author}}</h6>
-                        <a href="">
+                        <a href="{{route('clients.blogdetail',$blogs->id)}}">
                             <div class="pt-1" style="text-align: center; ">
                                 <button class="btn btn-readmore ">Read More</button>
                             </div>
@@ -204,91 +204,25 @@
         </div>
     </div>
 </section>
-<section class="testimonials py-5" id="testimonials">
+<section class="content-info py-5">
+
     <div class="container py-md-5">
-        <h3 class="heading text-center mb-3 mb-sm-5">Client Reviews</h3>
-        <div class="row mt-3">
-
-            <div class="col-md-4 test-grid text-left px-lg-3">
-                <div class="test-info">
-
-                    <p>Lorem Ipsum has been the industry's standard since the 1500s. Praesent ullamcorper dui turpis.</p>
-                    <h3 class="mt-md-4 mt-3"> Abraham Smith</h3>
-
-                    <div class="test-img text-center mb-3">
-                        <img src="images/test1.jpg" class="img-fluid" alt="user-image">
-                    </div>
-                    <div class="mobl-footer test-soc text-center">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#">
-                                    <span class="fa fa-facebook-f"></span>
-                                </a>
-                            </li>
-                            <li class="mx-1">
-                                <a href="#">
-                                    <span class="fa fa-twitter"></span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 test-grid text-left px-lg-3 py-sm-5 py-md-0 py-3">
-                <div class="test-info">
-
-                    <p>Lorem Ipsum has been the industry's standard since the 1500s. Praesent ullamcorper dui turpis.</p>
-                    <h3 class="mt-md-4 mt-3"> Mariana Noe</h3>
-                    <div class="test-img text-center mb-3">
-                        <img src="images/test2.jpg" class="img-fluid" alt="user-image">
-                    </div>
-                    <div class="mobl-footer test-soc text-center">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#">
-                                    <span class="fa fa-facebook-f"></span>
-                                </a>
-                            </li>
-                            <li class="mx-1">
-                                <a href="#">
-                                    <span class="fa fa-twitter"></span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 test-grid text-left px-lg-3">
-                <div class="test-info">
-
-                    <p>Lorem Ipsum has been the industry's standard since the 1500s. Praesent ullamcorper dui turpis.</p>
-                    <h3 class="mt-md-4 mt-3">Nebula Nairobi</h3>
-
-                    <div class="test-img text-center mb-3">
-                        <img src="images/test3.jpg" class="img-fluid" alt="user-image">
-                    </div>
-                    <div class="mobl-footer test-soc text-center">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#">
-                                    <span class="fa fa-facebook-f"></span>
-                                </a>
-                            </li>
-                            <li class="mx-1">
-                                <a href="#">
-                                    <span class="fa fa-twitter"></span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
+        <div class="text-center px-lg-5">
+            <h3 class="heading text-center mb-3 mb-sm-5">Get in Touch</h3>
+            <div class="title-desc text-center px-lg-5">
+                <p class="px-lg-5 sub-wthree">Don't be shy. Please ask us to have more informations.</p>
             </div>
         </div>
+        <div class="contact-w3pvt-form mt-5">
+
+                <div class="row">
+                    <div class="form-group mx-auto mt-3">
+                        <a href="{{route('clients.contact')}}"> <button  class="btn btn-lg  btn-readmore">Ask Question</button></a>
+                    </div>
+                </div>
 
 
+        </div>
     </div>
 </section>
 <section class="subscribe" id="subscribe">
