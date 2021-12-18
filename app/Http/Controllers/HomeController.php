@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\contactus\CreateValidate;
+use App\Http\Requests\Profile\UpdateValidate;
 use App\Http\Requests\RegisterRequest;
 use App\Models\Blog;
 use App\Models\Contact;
+use App\Models\patients;
 use App\Models\Preventions;
 use App\Models\RiskFactors;
 use App\Models\Symptoms;
@@ -107,6 +109,31 @@ class HomeController extends Controller
     public function about()
     {
         return view('clients.about');
+    }
+
+    public function profile($id)
+    {
+        $auth = auth()->user();
+        $patients = patients::where('id', $id)->first();
+        return view('clients.profile', compact('patients'));
+    }
+
+    public function postprofile(UpdateValidate $request)
+    {
+        $edit = patients::where('id', $request->id)->update([
+            'dateofbirth' => $request->dateofbirth,
+            'address' => $request->address,
+            'phone' => $request->phone,
+            'symptomps' => $request->symptomps,
+            'date_diagnosis' => $request->date_diagnosis,
+            'date_ctscan' => $request->date_ctscan,
+        ]);
+
+        if ($edit) {
+            return redirect()->route('clients.profile')->with('success', 'Edit success');
+        } else {
+            return redirect()->route('clients.profile')->with('fail', 'Edit fail');
+        }
     }
 
 }

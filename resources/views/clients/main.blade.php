@@ -62,7 +62,7 @@
 
                             @if(auth()->check())
                             <li class="mr-lg-3 mr-2 " style="color:white">Hi {{auth()->user()->name}}</li>
-
+                            <li class="mr-lg-3 mr-2"><a  href="{{route('clients.profile',auth()->user()->joinpatient()->id)}}">Profile</a></li>
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.logout')}}">Log out</a></li>
 
                             @else
