@@ -38,7 +38,7 @@
                         <td>{{$blogs->id}}</td>
                         <td>{{$blogs->title}}</td>
                         <td>{{$blogs->smalltitle}}</td>
-                        <td>{{$blogs->content}}</td>
+                        <td style=" max-width: 300px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{$blogs->content}}</td>
                         <td>{{$blogs->author}}</td>
                         <td>{{$blogs->publication_date}}</td>
                         <td style="width: 10%;"><img src="/img/{{$blogs->img}}" style="width: 100%;" alt=""></td>
