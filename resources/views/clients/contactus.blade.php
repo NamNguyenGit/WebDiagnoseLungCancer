@@ -13,7 +13,7 @@
     </div>
     <div class="container py-md-5">
         <div class="text-center px-lg-5">
-            <h3 class="heading text-center mb-3 mb-sm-5">Get in Touch</h3>
+            <h3 class="heading text-center mb-3 mb-sm-5">Contact Now</h3>
             <div class="title-desc text-center px-lg-5">
                 <p class="px-lg-5 sub-wthree">Don't be shy. Please ask us to have more informations.</p>
             </div>

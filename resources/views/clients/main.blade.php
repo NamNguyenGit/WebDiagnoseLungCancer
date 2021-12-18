@@ -50,6 +50,8 @@
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.about')}}">About </a></li>
 
 
+                            <li class="mr-lg-3 mr-2"><a href="{{route('manager.index')}}">Dang ki </a></li>
+
                             <li class="mr-lg-3 mr-2"><a href="{{route('manager.index')}}">Manager </a></li>
 
 

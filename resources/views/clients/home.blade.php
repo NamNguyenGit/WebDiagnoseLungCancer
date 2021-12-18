@@ -145,9 +145,9 @@
     <div class="container py-md-5">
         <h3 class="heading text-capitalize text-center mb-3 mb-sm-5">INFORMATIONS ABOUT LUNG CANCER</h3>
         <div class="row pricing-grids">
-            <div class="col-lg-6  mb-lg-0 mb-5">
+            <div class="col-lg-4  mb-lg-0 mb-5">
                 <div class="padding">
-                    <h3>SYMPTOMS OF LUNG CANCER</h3>
+                    <h3>SYMPTOMS</h3>
                     <!-- Item starts -->
                     @foreach($symptom as $key => $symptoms)
                     <div class="menu-item">
@@ -165,7 +165,7 @@
 
                 </div>
             </div>
-            <div class="col-lg-6  mb-lg-0 mb-5">
+            <div class="col-lg-4  mb-lg-0 mb-5">
                 <div class="padding">
                     <h3>RISK FACTORS</h3>
                     <!-- Item starts -->
@@ -177,6 +177,27 @@
                             </div>
                             <div class="col-2 menu-item-price text-right">
                             <a href="{{$riskfactors->refer}}"><h6>refer</h6></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    @endforeach
+                    <!-- Item ends -->
+
+                </div>
+            </div>
+            <div class="col-lg-4  mb-lg-0 mb-5">
+                <div class="padding">
+                    <h3>PREVENTIONS</h3>
+                    <!-- Item starts -->
+                    @foreach($prevention as $key => $preventions)
+                    <div class="menu-item">
+                        <div class="row border-dot no-gutters">
+                            <div class="col-10 menu-item-name">
+                            <h6>{{$preventions->name}}</h6>
+                            </div>
+                            <div class="col-2 menu-item-price text-right">
+                            <a href="{{$preventions->refer}}"><h6>refer</h6></a>
                             </div>
                         </div>
 
@@ -208,7 +229,7 @@
 
     <div class="container py-md-5">
         <div class="text-center px-lg-5">
-            <h3 class="heading text-center mb-3 mb-sm-5">Get in Touch</h3>
+            <h3 class="heading text-center mb-3 mb-sm-5">Keep in Touch</h3>
             <div class="title-desc text-center px-lg-5">
                 <p class="px-lg-5 sub-wthree">Don't be shy. Please ask us to have more informations.</p>
             </div>

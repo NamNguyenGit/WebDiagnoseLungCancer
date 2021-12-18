@@ -6,6 +6,7 @@ use App\Http\Requests\contactus\CreateValidate;
 use App\Http\Requests\RegisterRequest;
 use App\Models\Blog;
 use App\Models\Contact;
+use App\Models\Preventions;
 use App\Models\RiskFactors;
 use App\Models\Symptoms;
 use App\Models\User;
@@ -40,11 +41,12 @@ class HomeController extends Controller
 
     public function home()
     {
+        $prevention = Preventions::all();
         $riskfactor = RiskFactors::all();
         $symptom = Symptoms::all();
         $newblog = Blog::orderByDesc('created_at')->paginate(2);
         $blog = Blog::paginate(3);
-        return view('clients.home', compact('blog', 'newblog', 'riskfactor', 'symptom'));
+        return view('clients.home', compact('blog', 'newblog', 'riskfactor', 'symptom', 'prevention'));
     }
 
     public function login()

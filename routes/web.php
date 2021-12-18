@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatientsController;
+use App\Http\Controllers\PreventionController;
 use App\Http\Controllers\RiskFactorsController;
 use App\Http\Controllers\SymptomsController;
 use Illuminate\Support\Facades\Route;
@@ -45,6 +46,13 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/edit-symptom/{id}', [SymptomsController::class, 'edit'])->name('symptoms.edit');
         Route::put('/edit-symptom', [SymptomsController::class, 'update'])->name('symptoms.update');
         Route::get('/delete-symptom/{id}', [SymptomsController::class, 'delete'])->name('symptoms.delete');
+
+        Route::get('/preventions', [PreventionController::class, 'index'])->name('preventions.index');
+        Route::get('/add-prevention', [PreventionController::class, 'create'])->name('preventions.create');
+        Route::post('/add-prevention', [PreventionController::class, 'store'])->name('preventions.store');
+        Route::get('/edit-prevention/{id}', [PreventionController::class, 'edit'])->name('preventions.edit');
+        Route::put('/edit-prevention', [PreventionController::class, 'update'])->name('preventions.update');
+        Route::get('/delete-prevention/{id}', [PreventionController::class, 'delete'])->name('preventions.delete');
     });
 
     Route::group(['prefix' => '/', 'middleware' => 'nodoctor'], function () {

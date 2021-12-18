@@ -161,6 +161,29 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-user-shield nav-icon"></i>
+                                <p>
+                                    Preventions
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{route('preventions.index')}}" class="nav-link">
+                                        <i class="far fa-list-alt nav-icon"></i>
+                                        <p>Lists</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('preventions.create')}}" class="nav-link">
+                                        <i class="fas fa-cog nav-icon"></i>
+                                        <p>Add Preventions</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                         @endif
                         @if(auth()->user()->role==1 || auth()->user()->role==3  )
                         <li class="nav-item">
