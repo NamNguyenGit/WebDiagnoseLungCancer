@@ -49,11 +49,13 @@
                             <li class="mr-lg-3 mr-2 active"><a href="{{route('clients.home')}}">Home</a></li>
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.about')}}">About </a></li>
 
-
-                            <li class="mr-lg-3 mr-2"><a href="{{route('manager.index')}}">Dang ki </a></li>
-
+                            @if(auth()->check())
+                            @if(auth()->user()->role==4)
+                            <li class="mr-lg-3 mr-2"><a href="{{route('manager.index')}}">Form Patient</a></li>
+                            @else
                             <li class="mr-lg-3 mr-2"><a href="{{route('manager.index')}}">Manager </a></li>
-
+                            @endif
+                            @endif
 
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.blog')}}">Blog</a></li>
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.contact')}}">Contact Us</a></li>
