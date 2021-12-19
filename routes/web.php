@@ -79,6 +79,6 @@ Route::group(['prefix' => '/'], function () {
 
     Route::get('/about', [HomeController::class, 'about'])->name('clients.about');
 
-    Route::get('/profile/{id}', [HomeController::class, 'profile'])->name('clients.profile');
-    Route::put('/editprofile/{id}', [HomeController::class, 'postprofile'])->name('clients.postprofile');
+    Route::get('/profile', [HomeController::class, 'profile'])->name('clients.profile');
+    Route::post('/editprofile', [HomeController::class, 'storeprofile'])->name('clients.postprofile');
 });

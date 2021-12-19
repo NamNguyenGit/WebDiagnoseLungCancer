@@ -24,9 +24,10 @@ class patients extends Authenticatable
         'dateofbirth',
         'address',
         'phone',
-        'symptomps',
+        'symptoms',
         'date_diagnosis',
         'date_ctscan',
+        'img',
 
     ];
 

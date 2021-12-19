@@ -24,10 +24,11 @@ class UpdateValidate extends FormRequest
     public function rules()
     {
         return [
+            'email' => 'required|unique:users,email,' . request()->id,
             'dateofbirth' => 'required|before:tomorrow',
             'address' => 'required',
             'phone' => 'required',
-            'symptomps' => 'required',
+            'symptoms' => 'required',
             'date_diagnosis' => 'required|before:tomorrow',
             'date_ctscan' => 'required|before:tomorrow',
         ];
@@ -35,11 +36,13 @@ class UpdateValidate extends FormRequest
     public function messages()
     {
         return [
+            'email.required' => 'Email required',
+            'email.unique' => 'Email already taken',
             'dateofbirth.required' => 'Date of Birth required',
             'dateofbirth.before' => 'Date of Birth before tomorrow',
             'address.required' => 'Address required',
             'phone.required' => 'Phone required',
-            'symptomps.required' => 'Symptomps required',
+            'symptoms.required' => 'symptoms required',
             'date_diagnosis.required' => 'Date diagnosis required',
             'date_diagnosis.before' => 'Date diagnosis before tomorrow',
             'date_ctscan.required' => 'Date CT Scan required',

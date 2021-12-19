@@ -24,11 +24,6 @@ class User extends Authenticatable
         'role',
     ];
 
-    public function joinpatient()
-    {
-        return $this->hasOne(patients::class, 'user_id', 'id');
-    }
-
     /**
      * The attributes that should be hidden for serialization.
      *

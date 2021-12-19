@@ -29,6 +29,7 @@
                         <th>Symptomps</th>
                         <th>Date of diagnosis</th>
                         <th>Date of ct scan</th>
+                        <th>Image</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,6 +43,7 @@
                         <td>{{$patient->symptoms}}</td>
                         <td>{{date('d-m-Y',strtotime($patient->date_diagnosis))}}</td>
                         <td>{{date('d-m-Y',strtotime($patient->date_ctscan))}}</td>
+                        <td style="width: 10%;"><img src="/img/{{$patient->img}}" style="width: 100%;" alt=""></td>
                     </tr>
                     @endforeach
                 </tbody>

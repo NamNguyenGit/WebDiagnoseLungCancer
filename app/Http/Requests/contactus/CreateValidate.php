@@ -27,6 +27,8 @@ class CreateValidate extends FormRequest
             'name' => 'required',
             'email' => 'required',
             'messages' => 'required',
+            'file_upload' => 'mimes:jpg,jpeg,png,gif',
+            'file_upload' => 'required',
         ];
     }
     public function messages()
@@ -35,6 +37,8 @@ class CreateValidate extends FormRequest
             'name.required' => 'Name required',
             'email.required' => 'Email required',
             'messages.required' => 'Messages required',
+            'file_upload.mimes' => 'Image type must be jpg,jpeg,png,gif',
+            'file_upload.required' => 'Image required',
         ];
     }
 }

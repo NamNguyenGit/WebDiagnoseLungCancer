@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\contactus\CreateValidate;
-use App\Http\Requests\Profile\UpdateValidate;
 use App\Http\Requests\RegisterRequest;
 use App\Models\Blog;
 use App\Models\Contact;
@@ -81,6 +80,12 @@ class HomeController extends Controller
 
     public function postcontactus(CreateValidate $request)
     {
+
+        if ($request->hasFile('file_upload')) {
+            $file_name = $request->file_upload->getClientOriginalName();
+            $request->file_upload->move(public_path('/img'), $file_name);
+            $request->merge(['image' => $file_name]);
+        }
         $add = Contact::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -111,20 +116,36 @@ class HomeController extends Controller
         return view('clients.about');
     }
 
-    public function profile($id)
+    public function profile()
     {
-        $auth = auth()->user();
-        $patients = patients::where('id', $id)->first();
-        return view('clients.profile', compact('patients'));
+        $auth = Auth::id();
+        $patient = patients::where('user_id', $auth)->first();
+
+        return view('clients.profile', compact('patient'));
     }
 
-    public function postprofile(UpdateValidate $request)
+    public function storeprofile(Request $request)
     {
-        $edit = patients::where('id', $request->id)->update([
+        if ($request->hasFile('file_upload')) {
+            $file_name = $request->file_upload->getClientOriginalName();
+            $request->file_upload->move(public_path('/img'), $file_name);
+            $request->merge(['image' => $file_name]);
+
+            $edit = patients::where('user_id', $request->id)->update([
+                'dateofbirth' => $request->dateofbirth,
+                'address' => $request->address,
+                'phone' => $request->phone,
+                'symptoms' => $request->symptoms,
+                'date_diagnosis' => $request->date_diagnosis,
+                'date_ctscan' => $request->date_ctscan,
+                'img' => $request->image,
+            ]);
+        }
+        $edit = patients::where('user_id', $request->id)->update([
             'dateofbirth' => $request->dateofbirth,
             'address' => $request->address,
             'phone' => $request->phone,
-            'symptomps' => $request->symptomps,
+            'symptoms' => $request->symptoms,
             'date_diagnosis' => $request->date_diagnosis,
             'date_ctscan' => $request->date_ctscan,
         ]);
