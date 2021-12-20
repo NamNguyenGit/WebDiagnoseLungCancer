@@ -56,8 +56,8 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/delete-prevention/{id}', [PreventionController::class, 'delete'])->name('preventions.delete');
 
         Route::get('/users', [UserController::class, 'index'])->name('users.index');
-        Route::get('/edit-users/{id}', [UserController::class, 'edit'])->name('users.edit');
-        Route::post('/edit-users', [UserController::class, 'update'])->name('users.update');
+
+        Route::post('/edit-roles', [UserController::class, 'update'])->name('users.update');
 
     });
 
@@ -82,6 +82,7 @@ Route::group(['prefix' => '/'], function () {
 
     Route::get('/blogs', [HomeController::class, 'blog'])->name('clients.blog');
     Route::get('/blogdetail/{id}', [HomeController::class, 'detailblog'])->name('clients.blogdetail');
+    Route::post('/search-blog', [HomeController::class, 'searchblog'])->name('clients.blogdetail');
 
     Route::get('/about', [HomeController::class, 'about'])->name('clients.about');
 
@@ -89,4 +90,5 @@ Route::group(['prefix' => '/'], function () {
     Route::post('/editprofile', [HomeController::class, 'storeprofile'])->name('clients.postprofile');
 
     Route::get('/formpatient', [HomeController::class, 'formpatient'])->name('clients.formpatient');
+    Route::post('/storepatient', [HomeController::class, 'storepatient'])->name('clients.storepatient');
 });

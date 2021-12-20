@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\contactus\CreateValidate;
+use App\Http\Requests\PatientFormValidate;
 use App\Http\Requests\RegisterRequest;
 use App\Models\Blog;
 use App\Models\Contact;
@@ -161,6 +162,40 @@ class HomeController extends Controller
     {
         $auth = Auth::id();
         return view('clients.formpatient');
+    }
+
+    public function storepatient(PatientFormValidate $request)
+    {
+        if ($request->hasFile('file_upload')) {
+            $file_name = $request->file_upload->getClientOriginalName();
+            $request->file_upload->move(public_path('/img'), $file_name);
+            $request->merge(['image' => $file_name]);
+        }
+        $auth = Auth::id();
+        $add = patients::create([
+            'user_id' => $auth,
+            'dateofbirth' => $request->dateofbirth,
+            'address' => $request->address,
+            'phone' => $request->phone,
+            'symptoms' => $request->symptoms,
+            'date_diagnosis' => $request->date_diagnosis,
+            'date_ctscan' => $request->date_ctscan,
+            'img' => $request->image,
+
+        ]);
+
+        if ($add) {
+            return redirect()->route('clients.profile')->with('success', 'Sent successful');
+        } else {
+            return redirect()->route('clients.profile')->with('fail', 'Sent fail');
+        }
+    }
+
+    public function searchblog(Request $request)
+    {
+        $value = $request->value;
+        $result = Blog::where('title', 'like', '%' . $value . '%')->orWhere('smalltitle', 'like', '%' . $value . '%')->orWhere('author', 'like', '%' . $value . '%')->orWhere('content', 'like', '%' . $value . '%')->get();
+        return response()->json($result);
     }
 
 }

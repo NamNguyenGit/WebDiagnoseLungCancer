@@ -51,10 +51,9 @@
 
                             @if(auth()->check())
                             @if(auth()->user()->role==4)
-                            @if(auth()->user()->id)
-                            @else
+
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.formpatient')}}">Form Patient</a></li>
-                            @endif
+
                             @else
                             <li class="mr-lg-3 mr-2"><a href="{{route('manager.index')}}">Manager </a></li>
                             @endif
@@ -175,7 +174,8 @@
             <!-- //footer bottom -->
         </div>
     </footer>
-    <!-- //footer -->
+
+@yield('js')    <!-- //footer -->
 </body>
 
 </html>

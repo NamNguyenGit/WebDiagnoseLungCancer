@@ -20,22 +20,24 @@
                 <div class="row">
 
                     <div class="col-md-12">
+
                         <input class="form-control mb-4" id="myInput" type="text" placeholder="Search some keywords">
-                        <div class="row">
-                        @foreach($blog as $key => $blogs)
-                        <div class="col-md-4 pt-5">
-                            <div class="blog-info" id="myblog">
-                                <a href="{{route('clients.blogdetail',$blogs->id)}}"> <img src="/img/{{$blogs->img}}" width="100%" style="height: 400px;" class="img-responsive" alt="" /></a>
-                                <h1 style="height: 200px;" class="pt-4">{{$blogs->title}}</h1> <span> <span class="fas fa-clock"></span>{{$blogs->publication_date}}</span>
-                                <p style="color: black"> <span class="fas fa-user"></span>
-                                    {{$blogs->author}}
-                                </p>
-                                <a href="{{route('clients.blogdetail',$blogs->id)}}">
-                                    <h5 class=" pb-5 " style="color: #ffc905;">Read more</h5>
-                                </a>
+                        @csrf
+                        <div class="row" id="ourblog">
+                            @foreach($blog as $key => $blogs)
+                            <div class="col-md-4 pt-5">
+                                <div class="blog-info" id="myblog">
+                                    <a href="{{route('clients.blogdetail',$blogs->id)}}"> <img src="/img/{{$blogs->img}}" width="100%" style="height: 400px;" class="img-responsive" alt="" /></a>
+                                    <h1 style="height: 200px;" class="pt-4">{{$blogs->title}}</h1> <span> <span class="fas fa-clock"></span>{{$blogs->publication_date}}</span>
+                                    <p style="color: black"> <span class="fas fa-user"></span>
+                                        {{$blogs->author}}
+                                    </p>
+                                    <a href="{{route('clients.blogdetail',$blogs->id)}}">
+                                        <h5 class=" pb-5 " style="color: #ffc905;">Read more</h5>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        @endforeach
+                            @endforeach
                         </div>
 
                     </div>
@@ -61,15 +63,61 @@
 <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 @endsection
 @section('js')
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
+"></script>
+<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js" ></script>
 <script>
     $(document).ready(function() {
-        $("#myInput").on("keyup", function() {
+        $("#myInput").on("change", function() {
             var value = $(this).val().toLowerCase();
-            console.log(value);
-            $("#myblog p").filter(function() {
-                $(this).toggle($(this).text().toLowerCase.indexof(value) > -1);
+            const data = {};
+            data.value = value;
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('input[name="_token"]').val()
+                }
+            });
+            $.ajax({
+                url: '/search-blog',
+                data: JSON.stringify(data),
+                contentType: "application/json; charset=utf-8",
+                traditional: true,
+                processData: false,
+                type: 'POST',
+                beforeSend: function() {
+                    $.LoadingOverlay('show');
+                },
+                success: function(response) {
+                    displayblog(response);
+                    $.LoadingOverlay('hide');
+
+                },
+                error: function(response) {
+                    $.LoadingOverlay('hide');
+                }
             });
         });
+
+
     });
+    function displayblog(response){
+        var ourblog = $('#ourblog');
+        ourblog.empty();
+        var html = '';
+        for(let i = 0 ; i<response.length;i++){
+        html+=  '<div class="col-md-4 pt-5">';
+        html+=  '<div class="blog-info" id="myblog">';
+        html+=  '<a href="/blogdetail/"'+response[i].id+'> <img src="/img/'+response[i].img+'" width="100%" style="height: 400px;" class="img-responsive" alt="" /></a>';
+        html+=  '<h1 style="height: 200px;" class="pt-4">'+response[i].title+'</h1> <span> <span class="fas fa-clock"></span>'+response[i].publication_date+'</span>';
+        html+=  '<p style="color: black"> <span class="fas fa-user"></span>  '+response[i].author+' </p>';
+        html+=  '<a href="/blogdetail/"'+response[i].id+'>  <h5 class=" pb-5 " style="color: #ffc905;">Read more</h5> </a>';
+        html+=  '</div>';
+        html+=  '</div>';
+        }
+        ourblog.html(html);
+
+    }
+
 </script>
 @endsection
