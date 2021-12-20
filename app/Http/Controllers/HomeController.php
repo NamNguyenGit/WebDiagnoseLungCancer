@@ -157,4 +157,10 @@ class HomeController extends Controller
         }
     }
 
+    public function formpatient()
+    {
+        $auth = Auth::id();
+        return view('clients.formpatient');
+    }
+
 }

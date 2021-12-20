@@ -8,6 +8,7 @@ use App\Http\Controllers\PatientsController;
 use App\Http\Controllers\PreventionController;
 use App\Http\Controllers\RiskFactorsController;
 use App\Http\Controllers\SymptomsController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,6 +54,11 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/edit-prevention/{id}', [PreventionController::class, 'edit'])->name('preventions.edit');
         Route::put('/edit-prevention', [PreventionController::class, 'update'])->name('preventions.update');
         Route::get('/delete-prevention/{id}', [PreventionController::class, 'delete'])->name('preventions.delete');
+
+        Route::get('/users', [UserController::class, 'index'])->name('users.index');
+        Route::get('/edit-users/{id}', [UserController::class, 'edit'])->name('users.edit');
+        Route::post('/edit-users', [UserController::class, 'update'])->name('users.update');
+
     });
 
     Route::group(['prefix' => '/', 'middleware' => 'nodoctor'], function () {
@@ -81,4 +87,6 @@ Route::group(['prefix' => '/'], function () {
 
     Route::get('/profile', [HomeController::class, 'profile'])->name('clients.profile');
     Route::post('/editprofile', [HomeController::class, 'storeprofile'])->name('clients.postprofile');
+
+    Route::get('/formpatient', [HomeController::class, 'formpatient'])->name('clients.formpatient');
 });

@@ -51,7 +51,10 @@
 
                             @if(auth()->check())
                             @if(auth()->user()->role==4)
-                            <li class="mr-lg-3 mr-2"><a href="{{route('manager.index')}}">Form Patient</a></li>
+                            @if(auth()->user()->id)
+                            @else
+                            <li class="mr-lg-3 mr-2"><a href="{{route('clients.formpatient')}}">Form Patient</a></li>
+                            @endif
                             @else
                             <li class="mr-lg-3 mr-2"><a href="{{route('manager.index')}}">Manager </a></li>
                             @endif
@@ -68,8 +71,6 @@
                             @else
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.login')}}">Log in</a></li>
                             <li><a class="mr-lg-3 mr-2" href="{{route('clients.register')}}">Register</a></li>
-
-
                             @endif
 
 
