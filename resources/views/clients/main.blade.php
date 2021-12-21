@@ -63,8 +63,8 @@
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.contact')}}">Contact Us</a></li>
 
                             @if(auth()->check())
-                            <li class="mr-lg-3 mr-2 " style="color:white">Hi {{auth()->user()->name}}</li>
-                            <li class="mr-lg-3 mr-2"><a  href="{{route('clients.profile')}}">Profile</a></li>
+                            <li class="mr-lg-3 mr-2 " style="color:white"> <a href="{{route('clients.profile')}}"> Hi {{auth()->user()->name}}</a></li>
+
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.logout')}}">Log out</a></li>
 
                             @else
