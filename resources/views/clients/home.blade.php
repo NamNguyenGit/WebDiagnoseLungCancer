@@ -15,7 +15,7 @@
                             <div class="container">
                                 <h2 class="movetxt agile-title text-capitalize">Lung cancer is the most diagnosed cancer at 11.6%</h2>
                                 <p>Lung cancer is the most common cancer worldwide, accounting for more than <span class="indexim"> 1.8 million</span> new cases and <span class="indexim">700.000 deaths </span>in 2020. </p>
-                                <a href="" class="btn"> Check your lungs now </a>
+                                <a href="{{route('clients.contact')}}" class="btn"> Check your lungs now </a>
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                             <div class="container">
                                 <h2 class="movetxt agile-title text-capitalize">To save and improve lives!</h2>
                                 <p> Dedicated to raising awareness, educating and promoting the early detection of mouth cancer as well as supporting those affected by it. </p>
-                                <a href="" class="btn">Get appointment </a>
+                                <a href="{{route('clients.contact')}}" class="btn">Get appointment </a>
                             </div>
                         </div>
                     </div>
