@@ -69,7 +69,7 @@
 <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js" ></script>
 <script>
     $(document).ready(function() {
-        $("#myInput").on("change", function() {
+        $("#myInput").on("keyup", function() {
             var value = $(this).val().toLowerCase();
             const data = {};
             data.value = value;
@@ -108,10 +108,10 @@
         for(let i = 0 ; i<response.length;i++){
         html+=  '<div class="col-md-4 pt-5">';
         html+=  '<div class="blog-info" id="myblog">';
-        html+=  '<a href="/blogdetail/"'+response[i].id+'> <img src="/img/'+response[i].img+'" width="100%" style="height: 400px;" class="img-responsive" alt="" /></a>';
+        html+=  '<a href="/blogdetail/'+response[i].id+'"> <img src="/img/'+response[i].img+'" width="100%" style="height: 400px;" class="img-responsive" alt="" /></a>';
         html+=  '<h1 style="height: 200px;" class="pt-4">'+response[i].title+'</h1> <span> <span class="fas fa-clock"></span>'+response[i].publication_date+'</span>';
         html+=  '<p style="color: black"> <span class="fas fa-user"></span>  '+response[i].author+' </p>';
-        html+=  '<a href="/blogdetail/"'+response[i].id+'>  <h5 class=" pb-5 " style="color: #ffc905;">Read more</h5> </a>';
+        html+=  '<a href="/blogdetail/'+response[i].id+'">  <h5 class=" pb-5 " style="color: #ffc905;">Read more</h5> </a>';
         html+=  '</div>';
         html+=  '</div>';
         }
