@@ -96,7 +96,7 @@
                             <a href="index.html">MAGIC CLINIC</a>
                         </h2>
                         <p class="my-3">Lung cancer is a type of cancer that begins in the lungs. Your lungs are two spongy organs in your chest that take in oxygen when you inhale and release carbon dioxide when you exhale. Lung cancer is the leading cause of cancer deaths worldwide</p>
-                        
+
                     </div>
                     <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
                         <div class="footer-w3pvt">
@@ -167,7 +167,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="move-top text-right"><a href="#home" class="move-top"> <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span></a></div>
+
             </div>
             <!-- //footer bottom -->
         </div>
