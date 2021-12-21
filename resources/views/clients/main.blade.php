@@ -96,9 +96,7 @@
                             <a href="index.html">MAGIC CLINIC</a>
                         </h2>
                         <p class="my-3">Lung cancer is a type of cancer that begins in the lungs. Your lungs are two spongy organs in your chest that take in oxygen when you inhale and release carbon dioxide when you exhale. Lung cancer is the leading cause of cancer deaths worldwide</p>
-                        <p>
-                            The promotion, protection and education of good health is key to raising awareness of mouth cancer. The charity aims to inform the public about the signs, symptoms, facts and figures and key causes of mouth cancer. Know what increases your risk of getting the disease by accessing our information on HPV, alcohol and smoking.
-                        </p>
+                        
                     </div>
                     <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
                         <div class="footer-w3pvt">
