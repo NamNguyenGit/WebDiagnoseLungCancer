@@ -27,12 +27,12 @@
                             @foreach($blog as $key => $blogs)
                             <div class="col-md-4 pt-5">
                                 <div class="blog-info" id="myblog">
-                                    <a href="{{route('clients.blogdetail',$blogs->id)}}"> <img src="/img/{{$blogs->img}}" width="100%" style="height: 400px;" class="img-responsive" alt="" /></a>
+                                    <a href="{{route('clients.blogdetails',$blogs->id)}}"> <img src="/img/{{$blogs->img}}" width="100%" style="height: 400px;" class="img-responsive" alt="" /></a>
                                     <h1 style="height: 200px;" class="pt-4">{{$blogs->title}}</h1> <span> <span class="fas fa-clock"></span>{{$blogs->publication_date}}</span>
                                     <p style="color: black"> <span class="fas fa-user"></span>
                                         {{$blogs->author}}
                                     </p>
-                                    <a href="{{route('clients.blogdetail',$blogs->id)}}">
+                                    <a href="{{route('clients.blogdetails',$blogs->id)}}">
                                         <h5 class=" pb-5 " style="color: #ffc905;">Read more</h5>
                                     </a>
                                 </div>

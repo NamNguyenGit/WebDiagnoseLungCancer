@@ -107,7 +107,7 @@
                         <h3 class="p-2 title-blog ">{{$newblogs->smalltitle}}</h3>
                         <h5 class="p-2"> <span class="fas fa-clock"></span> {{$newblogs->publication_date}} </h5>
                         <h5 class="p-2"> <span class="fas fa-user"></span> {{$newblogs->author}}</h5>
-                        <a href="{{route('clients.blogdetail',$newblogs->id)}}">
+                        <a href="{{route('clients.blogdetails',$newblogs->id)}}">
                             <div style="text-align: center;">
                                 <button class="btn btn-readmore ">Read More</button>
                             </div>
@@ -128,7 +128,7 @@
                         <h3 class="title-smallblog">{{$blogs->smalltitle}}</h3>
                         <h6 class="p-1"> <span class="fas fa-clock"></span> {{$blogs->publication_date}} </h6>
                         <h6 class="p-1"> <span class="fas fa-user"></span> {{$blogs->author}}</h6>
-                        <a href="{{route('clients.blogdetail',$blogs->id)}}">
+                        <a href="{{route('clients.blogdetails',$blogs->id)}}">
                             <div class="pt-1" style="text-align: center; ">
                                 <button class="btn btn-readmore ">Read More</button>
                             </div>

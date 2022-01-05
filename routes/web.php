@@ -81,7 +81,7 @@ Route::group(['prefix' => '/'], function () {
     Route::post('/contactus', [HomeController::class, 'postcontactus'])->name('clients.contact');
 
     Route::get('/blogs', [HomeController::class, 'blog'])->name('clients.blog');
-    Route::get('/blogdetail/{id}', [HomeController::class, 'detailblog'])->name('clients.blogdetail');
+    Route::get('/blogdetail/{id}', [HomeController::class, 'detailblog'])->name('clients.blogdetails');
     Route::post('/search-blog', [HomeController::class, 'searchblog'])->name('clients.blogdetail');
 
     Route::get('/about', [HomeController::class, 'about'])->name('clients.about');
