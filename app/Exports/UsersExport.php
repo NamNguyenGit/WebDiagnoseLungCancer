@@ -18,13 +18,15 @@ class UsersExport implements FromCollection, Responsable , ShouldAutoSize , With
     */
     public function collection()
     {
-        return ExportUser::all();
+        return  ExportUser::with('joinUser')->get();
+       
     }
     public function map($exportuser): array
     {
         return [
             $exportuser -> id ,
-            $exportuser -> user_id
+            $exportuser -> joinUser -> name,
+            
         ];
     }
 }
