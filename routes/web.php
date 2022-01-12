@@ -10,6 +10,7 @@ use App\Http\Controllers\RiskFactorsController;
 use App\Http\Controllers\SymptomsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserExportController;
+use App\Http\Controllers\UserImportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -94,4 +95,7 @@ Route::group(['prefix' => '/'], function () {
     Route::post('/storepatient', [HomeController::class, 'storepatient'])->name('clients.storepatient');
 
     Route::get('/export', [UserExportController::class, 'export'])->name('clients.export');
+
+    Route::get('/import', [UserImportController::class, 'show'])->name('clients.import');
+    Route::post('/postimport', [UserImportController::class, 'store'])->name('clients.importpost');
 });

@@ -54,13 +54,14 @@
 
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.formpatient')}}">Form Patient</a></li>
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.export')}}">Download Excel</a></li>
+                            <li class="mr-lg-3 mr-2"><a href="{{route('clients.import')}}">Import Excel</a></li>
                             @else
                             <li class="mr-lg-3 mr-2"><a href="{{route('manager.index')}}">Manager </a></li>
                             @endif
                             @endif
 
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.blog')}}">Blog</a></li>
-                            <li class="mr-lg-3 mr-2"><a href="{{route('clients.contact')}}">Contact Us</a></li>
+                          
 
                             @if(auth()->check())
                             <li class="mr-lg-3 mr-2 " style="color:white"> <a href="{{route('clients.profile')}}"> Hi {{auth()->user()->name}}</a></li>

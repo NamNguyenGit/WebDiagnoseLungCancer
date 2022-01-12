@@ -44,7 +44,9 @@ class UsersExport implements
     {
        return [
             'ID',
-            "Patient's name"
+            "Patient's name",
+            "Something",
+            "Something",
        ];
     }
 
@@ -52,7 +54,7 @@ class UsersExport implements
     {
         return [
             AfterSheet::class => function(AfterSheet $event) {
-                $event -> sheet -> getStyle('A1:B1')->applyFromArray([
+                $event -> sheet -> getStyle('A1:D2')->applyFromArray([
                     'font' => [
                         'bold' => true
                     ],
