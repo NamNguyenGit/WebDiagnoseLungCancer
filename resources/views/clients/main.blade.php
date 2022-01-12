@@ -53,7 +53,7 @@
                             @if(auth()->user()->role==4)
 
                             <li class="mr-lg-3 mr-2"><a href="{{route('clients.formpatient')}}">Form Patient</a></li>
-
+                            <li class="mr-lg-3 mr-2"><a href="{{route('clients.export')}}">Download Excel</a></li>
                             @else
                             <li class="mr-lg-3 mr-2"><a href="{{route('manager.index')}}">Manager </a></li>
                             @endif
