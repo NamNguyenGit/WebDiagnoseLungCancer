@@ -8,6 +8,9 @@ use Maatwebsite\Excel\Excel;
 
 class UserExportController extends Controller
 {
+
+
+    
     private $excel;
     public function __construct(Excel $excel)
     {

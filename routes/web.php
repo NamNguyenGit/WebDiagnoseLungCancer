@@ -11,6 +11,7 @@ use App\Http\Controllers\SymptomsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserExportController;
 use App\Http\Controllers\UserImportController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,6 +67,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => '/', 'middleware' => 'nodoctor'], function () {
         Route::get('/contactus', [ContactController::class, 'index'])->name('contactus.index');
         Route::post('/editstatuscontact', [ContactController::class, 'editstatus'])->name('contactus.editstatus');
+    });
+
+    Route::group(['prefix' => '/'], function () {
+        Route::get('/excelfile', [UserImportController::class, 'index'])->name('excel.index');
+        Route::post('/excelfilestatus', [UserImportController::class, 'editstatus'])->name('excel.editstatus');
     });
 });
 

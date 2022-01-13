@@ -51,7 +51,7 @@ class UsersExport implements
     {
         return [
             AfterSheet::class => function(AfterSheet $event) {
-                $event -> sheet -> getStyle('A1:D2')->applyFromArray([
+                $event -> sheet -> getStyle('A1:D1')->applyFromArray([
                     'font' => [
                         'bold' => true
                     ],
