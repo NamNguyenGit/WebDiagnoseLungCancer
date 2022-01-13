@@ -28,8 +28,11 @@
                             @csrf
 
                             <div class="form-group">
+                            @error('file')
+                                <small class="help-block text-danger">{{$message}}</small>
+                                @enderror
                                 <input type="file" name="file" />
-
+                                
                                 <button type="submit" style="width: 134px" class="btn btn-primary mt-2">Import</button>
                             </div>
                         </form>

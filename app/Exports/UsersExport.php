@@ -41,7 +41,7 @@ class UsersExport implements
     {
        return [
             
-            "Patient's name",
+            "Name",
             "Symptoms",
             "Phone",
        ];

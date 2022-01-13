@@ -12,7 +12,7 @@ class ExportUser extends Model
     protected $table = 'excelfile';
     protected $fillable = [
         
-        'user_name',
+        'name',
         'symptoms',
         'phone'
 
