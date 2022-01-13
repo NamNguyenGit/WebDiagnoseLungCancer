@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
@@ -61,7 +62,6 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/users', [UserController::class, 'index'])->name('users.index');
 
         Route::post('/edit-roles', [UserController::class, 'update'])->name('users.update');
-
     });
 
     Route::group(['prefix' => '/', 'middleware' => 'nodoctor'], function () {
@@ -104,4 +104,10 @@ Route::group(['prefix' => '/'], function () {
 
     Route::get('/import', [UserImportController::class, 'show'])->name('clients.import');
     Route::post('/postimport', [UserImportController::class, 'store'])->name('clients.importpost');
+
+    // Google login
+    Route::get('login/github', [LoginController::class, 'redirectToGithub'])->name('login.github');
+    Route::get('login/github/callback', [LoginController::class, 'handleGithubCallback']);
+
+ 
 });

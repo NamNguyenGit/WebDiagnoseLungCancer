@@ -22,14 +22,9 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
                         <div class="pb-2">
-                            <button type="submit" class="form-control btn submit px-3 gglogin">Login with Google</button>
+                            <a href="{{route('login.github')}}"> <button type="submit" class="form-control btn submit px-3 ghlogin"> <span class="fa fa-github  mr-2 " style="font-size:24px;"></span> Login with Github</button></a>
                         </div>
-                        <div class="pb-2">
-                            <button type="submit" class="form-control btn  submit px-3 fblogin">Login with Facebook</button>
-                        </div>
-                        <div class="pb-2">
-                            <button type="submit" class="form-control btn  submit px-3 ghlogin">Login with Github</button>
-                        </div>
+                      
 
                         <h3 class="mb-4 text-center">OR</h3>
 
