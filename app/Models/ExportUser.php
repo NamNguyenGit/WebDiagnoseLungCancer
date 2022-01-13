@@ -12,13 +12,11 @@ class ExportUser extends Model
     protected $table = 'excelfile';
     protected $fillable = [
         
-        'user_id',
-        
+        'user_name',
+        'symptoms',
+        'phone'
 
     ];
 
-    public function joinUser()
-    {
-        return $this->hasOne(User::class, 'id', 'user_id');
-    }
+   
 }

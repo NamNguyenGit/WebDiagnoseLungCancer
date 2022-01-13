@@ -5,6 +5,7 @@ namespace App\Exports;
 use App\Models\ExportUser;
 use Illuminate\Contracts\Support\Responsable;
 use Maatwebsite\Excel\Concerns\Exportable;
+use Maatwebsite\Excel\Concerns\FromArray;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithEvents;
@@ -14,39 +15,35 @@ use Maatwebsite\Excel\Events\AfterSheet;
 use Psy\TabCompletion\Matcher\FunctionsMatcher;
 
 class UsersExport implements
-    FromCollection,
+  
     Responsable,
     ShouldAutoSize,
-    WithMapping,
+   
     WithHeadings,
-    WithEvents
+    WithEvents,
+    FromArray
 {
     use Exportable;
     private $fileName = "User.xlsx";
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
+    public function array(): array
     {
-        return  ExportUser::with('joinUser')->get();
-       
-    }
-    public function map($exportuser): array
-    {
-        return [
-            $exportuser -> id ,
-            $exportuser -> joinUser -> name,
-            
+        return[
+            ['Nguyen Van A', 'Cough','0123456789']
         ];
     }
+    
+   
 
     public function headings(): array
     {
        return [
-            'ID',
+            
             "Patient's name",
-            "Something",
-            "Something",
+            "Symptoms",
+            "Phone",
        ];
     }
 

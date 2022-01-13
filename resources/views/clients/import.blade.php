@@ -30,10 +30,10 @@
                             <div class="form-group">
                                 <input type="file" name="file" />
 
-                                <button type="submit" class="btn btn-primary mt-2">Import</button>
+                                <button type="submit" style="width: 134px" class="btn btn-primary mt-2">Import</button>
                             </div>
                         </form>
-                        </button>
+                        <a href="{{route('clients.export')}}"> <button type="submit" class="btn btn-success mt-2">Download Example</button></a>
                     </div>
                 </div>
             </div>
