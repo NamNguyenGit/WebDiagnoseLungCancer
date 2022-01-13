@@ -15,7 +15,7 @@
                             <div class="container">
                                 <h2 class="movetxt agile-title text-capitalize">Lung cancer is the most diagnosed cancer at 11.6%</h2>
                                 <p>Lung cancer is the most common cancer worldwide, accounting for more than <span class="indexim"> 1.8 million</span> new cases and <span class="indexim">700.000 deaths </span>in 2020. </p>
-                                <a href="{{route('clients.contact')}}" class="btn"> Check your lungs now </a>
+                                <a href="{{route('clients.import')}}" class="btn"> Check your lungs now </a>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                             <div class="container">
                                 <h2 class="movetxt agile-title text-capitalize"><span>1 in 5 </span> cancer deaths are from lung cancer</h2>
                                 <p>About 80% of lung cancer death result from <span class="indexim">smoking tobacco </span>.</p>
-                                <a href="{{route('clients.blog')}}" class="btn"> No Smoking</a>
+
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
 
                 <a href="{{route('clients.about')}}">
                     <div>
-                    <button class="btn btn-lg  btn-readmore mt-lg-4 mt-3 read scroll ">Learn More</button>
+                        <button class="btn btn-lg  btn-readmore mt-lg-4 mt-3 read scroll ">Learn More</button>
                     </div>
                 </a>
 
@@ -102,9 +102,11 @@
             @foreach($newblog as $key => $newblogs)
             <div class="col-md-6 ab-content ab-content1">
                 <div class="ab-content-inner">
-                    <a href=""><img src="/img/{{$newblogs->img}}" alt="news image" class="img-fluid"></a>
+                    <a href="{{route('clients.blogdetails',$newblogs->id)}}"><img src="/img/{{$newblogs->img}}" alt="news image" class="img-fluid"></a>
                     <div class="ab-info-con">
-                        <h3 class="p-2 title-blog ">{{$newblogs->smalltitle}}</h3>
+                        <a href="{{route('clients.blogdetails',$newblogs->id)}}">
+                            <h3 class="p-2 title-blog ">{{$newblogs->smalltitle}}</h3>
+                        </a>
                         <h5 class="p-2"> <span class="fas fa-clock"></span> {{$newblogs->publication_date}} </h5>
                         <h5 class="p-2"> <span class="fas fa-user"></span> {{$newblogs->author}}</h5>
                         <a href="{{route('clients.blogdetails',$newblogs->id)}}">
@@ -123,9 +125,11 @@
             @foreach($blog as $key => $blogs)
             <div class="col-md-4 ab-content">
                 <div class="ab-content-inner">
-                    <a href=""><img src="/img/{{$blogs->img}}" alt="news image" class="img-fluid"></a>
+                    <a href="{{route('clients.blogdetails',$blogs->id)}}"><img src="/img/{{$blogs->img}}" alt="news image" class="img-fluid"></a>
                     <div class="ab-info-con">
-                        <h3 class="title-smallblog">{{$blogs->smalltitle}}</h3>
+                        <a href="{{route('clients.blogdetails',$blogs->id)}}">
+                            <h3 class="title-smallblog">{{$blogs->smalltitle}}</h3>
+                        </a>
                         <h6 class="p-1"> <span class="fas fa-clock"></span> {{$blogs->publication_date}} </h6>
                         <h6 class="p-1"> <span class="fas fa-user"></span> {{$blogs->author}}</h6>
                         <a href="{{route('clients.blogdetails',$blogs->id)}}">
@@ -156,7 +160,9 @@
                                 <h6>{{$symptoms->name}}</h6>
                             </div>
                             <div class="col-2 menu-item-price text-right">
-                            <a href="{{$symptoms->refer}}"><h6>refer</h6></a>
+                                <a href="{{$symptoms->refer}}">
+                                    <h6>refer</h6>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -173,10 +179,12 @@
                     <div class="menu-item">
                         <div class="row border-dot no-gutters">
                             <div class="col-10 menu-item-name">
-                            <h6>{{$riskfactors->name}}</h6>
+                                <h6>{{$riskfactors->name}}</h6>
                             </div>
                             <div class="col-2 menu-item-price text-right">
-                            <a href="{{$riskfactors->refer}}"><h6>refer</h6></a>
+                                <a href="{{$riskfactors->refer}}">
+                                    <h6>refer</h6>
+                                </a>
                             </div>
                         </div>
 
@@ -194,10 +202,12 @@
                     <div class="menu-item">
                         <div class="row border-dot no-gutters">
                             <div class="col-10 menu-item-name">
-                            <h6>{{$preventions->name}}</h6>
+                                <h6>{{$preventions->name}}</h6>
                             </div>
                             <div class="col-2 menu-item-price text-right">
-                            <a href="{{$preventions->refer}}"><h6>refer</h6></a>
+                                <a href="{{$preventions->refer}}">
+                                    <h6>refer</h6>
+                                </a>
                             </div>
                         </div>
 
@@ -236,11 +246,11 @@
         </div>
         <div class="contact-w3pvt-form mt-5">
 
-                <div class="row">
-                    <div class="form-group mx-auto mt-3">
-                        <a href="{{route('clients.contact')}}"> <button  class="btn btn-lg  btn-readmore">Ask Question</button></a>
-                    </div>
+            <div class="row">
+                <div class="form-group mx-auto mt-3">
+                    <a href="{{route('clients.contact')}}"> <button class="btn btn-lg  btn-readmore">Ask Question</button></a>
                 </div>
+            </div>
 
 
         </div>

@@ -8346,3 +8346,17 @@ textarea.form-control {
         border: 1px solid transparent;
         background: #fbceb5;
         color: #fff; }
+
+/* Style login*/
+.gglogin{
+  background-color: #DD4437;
+  color: white;
+}
+.fblogin{
+  background-color: #29487D;
+  color: white;
+}
+.ghlogin{
+  background-color: black;
+  color: white;
+}

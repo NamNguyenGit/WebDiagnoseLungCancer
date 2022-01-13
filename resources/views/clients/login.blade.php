@@ -21,7 +21,18 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
-                        <a href="{{route('clients.register')}}">  <h3 class="mb-4 text-center">Have an account?</h3></a>
+                        <div class="pb-2">
+                            <button type="submit" class="form-control btn submit px-3 gglogin">Login with Google</button>
+                        </div>
+                        <div class="pb-2">
+                            <button type="submit" class="form-control btn  submit px-3 fblogin">Login with Facebook</button>
+                        </div>
+                        <div class="pb-2">
+                            <button type="submit" class="form-control btn  submit px-3 ghlogin">Login with Github</button>
+                        </div>
+
+                        <h3 class="mb-4 text-center">OR</h3>
+
 
                         <form action="{{route('clients.login')}}" method="POST" role="form" class="signin-form">
                             @csrf
@@ -42,9 +53,16 @@
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
+                                <div class="w-50">
+                                    <a href="{{route('clients.register')}}"><label class="checkbox-wrap checkbox-primary">Have an account ?
+
+                                        </label></a>
+
+                                </div>
 
                             </div>
                         </form>
+
 
                     </div>
                 </div>

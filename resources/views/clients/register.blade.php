@@ -49,7 +49,13 @@
                                 <button type="submit" class="form-control btn btn-primary submit px-3">Sign Up</button>
                             </div>
 
+
                         </form>
+                        <a href="{{route('clients.login')}}">
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary submit px-3">Back To Login</button>
+                            </div>
+                        </a>
 
                     </div>
                 </div>
