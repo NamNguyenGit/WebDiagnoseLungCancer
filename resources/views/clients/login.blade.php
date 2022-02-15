@@ -28,10 +28,16 @@
                             @csrf
                             <div class="form-group">
                                 <input type="text" class="form-control" name="email" placeholder="Email">
+                                @error('email')
+                                <small class="help-block text-danger">{{$message}}</small>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <input id="password-field" type="password" name="password" class="form-control" placeholder="Password">
                                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                @error('password')
+                                <small class="help-block text-danger">{{$message}}</small>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>

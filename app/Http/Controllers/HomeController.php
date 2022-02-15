@@ -14,6 +14,7 @@ use App\Models\Symptoms;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\loginValidate;
 
 class HomeController extends Controller
 {
@@ -59,7 +60,7 @@ class HomeController extends Controller
         return view('clients.login');
     }
 
-    public function check_login(Request $request)
+    public function check_login(loginValidate $request)
     {
         $check = Auth::attempt($request->only('email', 'password'), $request->has('remember'));
         if ($check) {
