@@ -31,8 +31,8 @@ class UserImportController extends Controller
 
     public function store(importexcelRequest $request)
     {
-        $edit = $request->file('file')->store('import');
-        
+        $edit = $file = $request->file('file')->store('import');
+        (new UsersImport) -> import($file);
         if ($edit) {
             return redirect()->route('clients.import');
         } else {
