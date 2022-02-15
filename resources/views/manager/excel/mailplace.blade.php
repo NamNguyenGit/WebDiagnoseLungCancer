@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Excel File Information</h1>
+                    <h1 class="m-0">Send Email To Patient</h1>
                 </div>
 
             </div>
@@ -17,51 +17,27 @@
     <section class="content">
         <div class="container-fluid">
 
-            <table id="example1" class="table table-bordered table-inverse table-hover">
-                <thead>
+            <form method="POST" action="{{route('excel.mail')}}">
+                @csrf
+                <div class="card-body">
 
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Symptoms</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-                        <th>Mail</th>
-                        <th>Contact</th>
+                    <input type="hidden" value="{{$id}}" name="id">
+                    <div class="form-group">
+                        <label>Content</label>
+                        <textarea placeholder="Content..." name="content" class="form-control"></textarea>
+                        @error('content')
+                        <small class="help-block text-danger">{{$message}}</small>
+                        @enderror
+                    </div>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($exportuser as $key => $exportusers)
-                    <tr>
-                        <td>{{$exportusers->id}}</td>
-                        <td>{{$exportusers->name}}</td>
-                        <td>{{$exportusers->symptoms}}</td>
-                        <td>{{$exportusers->phone}}</td>
-                        <td>{{$exportusers->email}}</td>
-                        <td>
-                            <a href="{{route('excel.mailplace',$exportusers->id)}}" class="btn btn-dark "> Mail </a>
-                        </td>
-                        <td>
-                            @if($exportusers->status==1)
-                            <form action="{{route('excel.editstatus')}}" method="POST">
-                                @csrf
-                                <input type="hidden" name="id" value="{{$exportusers->id}}">
-                                <input type="hidden" name="status" value="2">
-                                <button type="submit" class="btn btn-danger">No</button>
 
-                            </form>
 
-                            @else
-                            <button type="button" class="btn btn-primary">Yes</button>
+                </div>
 
-                            @endif
-
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </form>
 
         </div>
     </section>

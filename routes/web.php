@@ -72,6 +72,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => '/'], function () {
         Route::get('/excelfile', [UserImportController::class, 'index'])->name('excel.index');
         Route::post('/excelfilestatus', [UserImportController::class, 'editstatus'])->name('excel.editstatus');
+        Route::get('/mailplace/{id}', [UserImportController::class, 'mailplace'])->name('excel.mailplace');
+        Route::post('/mail', [UserImportController::class, 'mail'])->name('excel.mail');
     });
 });
 
@@ -104,6 +106,7 @@ Route::group(['prefix' => '/'], function () {
 
     Route::get('/import', [UserImportController::class, 'show'])->name('clients.import');
     Route::post('/postimport', [UserImportController::class, 'store'])->name('clients.importpost');
+   
 
     // Github login
     Route::get('login/github', [LoginController::class, 'redirectToGithub'])->name('login.github');
