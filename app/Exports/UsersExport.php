@@ -31,7 +31,7 @@ class UsersExport implements
     public function array(): array
     {
         return[
-            ['Nguyen Van A', 'Cough','0123456789']
+            ['Nguyen Van A', 'Cough','0123456789','A@gmail.com']
         ];
     }
     
@@ -44,6 +44,7 @@ class UsersExport implements
             "Name",
             "Symptoms",
             "Phone",
+            "Email",
        ];
     }
 

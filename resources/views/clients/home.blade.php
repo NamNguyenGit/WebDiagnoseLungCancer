@@ -227,7 +227,7 @@
             <h3 class="tittle order">
                 <span>CALL US TO HAVE MORE QUESTION</span>Our team will call back immediately and Book the Appointment
             </h3>
-            <h4 class="tittle my-2">123456789 </h4>
+            <h4 class="tittle my-2">0336065128 </h4>
 
             <div class="read-more mx-auto m-0 text-center">
                 <a href="" class="read-more scroll btn">Click here</a>
@@ -256,27 +256,7 @@
         </div>
     </div>
 </section>
-<section class="subscribe" id="subscribe">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-5 d-flex subscribe-left p-lg-5 py-sm-5 py-4">
-                <div class="news-icon mr-3">
-                    <span class="fa fa-paper-plane" aria-hidden="true"></span>
-                </div>
-                <div class="text">
-                    <h3>Subscribe To Our Newsletter</h3>
-                </div>
-            </div>
-            <div class="col-md-7 subscribe-right p-lg-5 py-sm-5 py-4">
-                <form action="#" method="post">
-                    <input type="email" name="email" placeholder="Enter your email here" required="">
-                    <button class="btn1"><span class="fa fa-paper-plane" aria-hidden="true"></span></button>
-                </form>
-                <p>we never share your email with anyone else</p>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 @endsection
 @section('js')

@@ -12,16 +12,13 @@ use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
 {
-    // Google login
+    // Github login
     public function redirectToGithub()
     {
         return Socialite::driver('github')->redirect();
-
-     
-
     }
 
-    // Google callback
+    // Github callback
     public function handleGithubCallback()
     {
         
@@ -37,13 +34,12 @@ class LoginController extends Controller
         }
         
         //add to database
-        
-
         Auth::login($user,true);
-
         return redirect()->route('clients.home');
        
     }
+
+    
 
     
 }

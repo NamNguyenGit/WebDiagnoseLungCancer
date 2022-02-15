@@ -14,8 +14,8 @@ class ExportUser extends Model
         
         'name',
         'symptoms',
-        'phone'
-
+        'phone',
+        'email'
     ];
 
    

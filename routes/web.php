@@ -105,9 +105,11 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/import', [UserImportController::class, 'show'])->name('clients.import');
     Route::post('/postimport', [UserImportController::class, 'store'])->name('clients.importpost');
 
-    // Google login
+    // Github login
     Route::get('login/github', [LoginController::class, 'redirectToGithub'])->name('login.github');
     Route::get('login/github/callback', [LoginController::class, 'handleGithubCallback']);
+
+   
 
  
 });

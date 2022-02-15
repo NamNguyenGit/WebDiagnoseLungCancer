@@ -21,12 +21,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
-                        <div class="pb-2">
-                            <a href="{{route('login.github')}}"> <button type="submit" class="form-control btn submit px-3 ghlogin"> <span class="fa fa-github  mr-2 " style="font-size:24px;"></span> Login with Github</button></a>
-                        </div>
                       
-
-                        <h3 class="mb-4 text-center">OR</h3>
 
 
                         <form action="{{route('clients.login')}}" method="POST" role="form" class="signin-form">

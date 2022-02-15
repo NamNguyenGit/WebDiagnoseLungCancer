@@ -26,7 +26,7 @@ class UsersImport implements ToModel , WithHeadingRow ,WithBatchInserts, WithChu
             'name' => $row['name'],
             'symptoms' => $row['symptoms'],
             'phone' => $row['phone'],
-           
+            'email' => $row['email'],
         ]);
     }
 

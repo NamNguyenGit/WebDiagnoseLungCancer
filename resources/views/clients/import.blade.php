@@ -28,11 +28,11 @@
                             @csrf
 
                             <div class="form-group">
-                            @error('file')
+                                @error('file')
                                 <small class="help-block text-danger">{{$message}}</small>
                                 @enderror
                                 <input type="file" name="file" />
-                                
+
                                 <button type="submit" style="width: 134px" class="btn btn-primary mt-2">Import</button>
                             </div>
                         </form>
@@ -54,8 +54,33 @@
 @section('css')
 
 <link rel="stylesheet" href="/client/css/style.css" type="text/css" media="all" />
-
+<link rel="stylesheet" href="/admin/plugins/toastr/toastr.min.css">
 @endsection
 @section('js')
+<script src="/admin/plugins/jquery/jquery.min.js"></script>
 
+<script src="/admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="/admin/plugins/toastr/toastr.min.js"></script>
+<script>
+    toastr.options = {
+        "debug": false,
+        "positionClass": "toast-top-center",
+        "fadeIn": 300,
+        "fadeOut": 1000,
+        "timeOut": 3000,
+        "extendedTimeOut": 1000
+    }
+</script>
+
+@if(Session::has('success'))
+<script>
+    toastr.success("{{Session::get('success')}}", 'Success');
+</script>
+@endif
+
+@if(Session::has('fail'))
+<script>
+    toastr.error("{{Session::get('fail')}}", 'Fail');
+</script>
+@endif
 @endsection

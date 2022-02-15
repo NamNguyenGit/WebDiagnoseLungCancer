@@ -22,31 +22,7 @@
                     <h4>{{$blog->smalltitle}}</h4>
                     <p>{{$blog->content}}</p>
 
-                    <ul class="w3ls_social_list list-unstyled mt-4">
-                        <li class="lead">
-                            Catch On Social :
-                        </li>
-                        <li>
-                            <a href="#" class="w3pvt_facebook">
-                                <span class="fa fa-facebook-f"></span>
-                            </a>
-                        </li>
-                        <li class="mx-2">
-                            <a href="#" class="w3pvt_twitter">
-                                <span class="fa fa-twitter"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="w3pvt_dribble">
-                                <span class="fa fa-dribbble"></span>
-                            </a>
-                        </li>
-                        <li class="ml-2">
-                            <a href="#" class="w3pvt_google">
-                                <span class="fa fa-google-plus"></span>
-                            </a>
-                        </li>
-                    </ul>
+                    
 
 
 

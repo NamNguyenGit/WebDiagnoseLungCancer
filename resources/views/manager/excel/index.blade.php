@@ -25,6 +25,7 @@
                         <th>Name</th>
                         <th>Symptoms</th>
                         <th>Phone</th>
+                        <th>Email</th>
                         <th>Contact</th>
                     </tr>
                 </thead>
@@ -35,6 +36,7 @@
                         <td>{{$exportusers->name}}</td>
                         <td>{{$exportusers->symptoms}}</td>
                         <td>{{$exportusers->phone}}</td>
+                        <td>{{$exportusers->email}}</td>
                         <td>
                             @if($exportusers->status==1)
                             <form action="{{route('excel.editstatus')}}" method="POST">

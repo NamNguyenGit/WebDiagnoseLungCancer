@@ -31,12 +31,12 @@ class UserImportController extends Controller
 
     public function store(importexcelRequest $request)
     {
-        $file = $request -> file('file')->store('import');
-
-     
-
-       (new UsersImport) -> import($file);
+        $edit = $request->file('file')->store('import');
         
-        return back()->withStatus('Excel file imported successfully');
+        if ($edit) {
+            return redirect()->route('clients.import')->with('success', 'Edit successful');
+        } else {
+            return redirect()->route('clients.import')->with('fail', 'Edit fail');
+        }
     }
 }
