@@ -127,7 +127,7 @@
                             <hr>
                             <div class="last-w3ls-contact">
                                 <p>
-                                    <a href="mailto:example@email.com">Group4@gmail.com</a>
+                                    <a href="mailto:example@email.com">Group3@gmail.com</a>
                                 </p>
                             </div>
                             <div class="last-w3ls-contact my-2">

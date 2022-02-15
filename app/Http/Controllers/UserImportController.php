@@ -34,9 +34,9 @@ class UserImportController extends Controller
         $edit = $file = $request->file('file')->store('import');
         (new UsersImport) -> import($file);
         if ($edit) {
-            return redirect()->route('clients.import');
+            return redirect()->route('clients.import')->with('success', 'Post successful');
         } else {
-            return redirect()->route('clients.import');
+            return redirect()->route('clients.import')->with('fail', 'Post file');
         }
     }
 }
